@@ -22,6 +22,7 @@ pkgs.stdenv.mkDerivation {
   '';
 
   installPhase = ''
-
+    mkdir $out
+    cp -r _site/* $out
   '';
 }
