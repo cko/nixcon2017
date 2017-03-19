@@ -14,6 +14,10 @@
   color: #7ebae4 !important;
 }
 
+.container {
+  margin-bottom: 8em;
+}
+
 #map {
     width: 100%;
     height: 550px;
