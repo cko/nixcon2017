@@ -3,7 +3,7 @@
 pkgs.stdenv.mkDerivation {
   name = "nixcon2017-website";
 
-  src = ../nixcon2017;
+  src = ./.;
 
   buildInputs = with pkgs; [
     glibcLocales
