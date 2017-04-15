@@ -1,3 +1,9 @@
+.nixos-logo:hover {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
 .nixos-dark {
   background-color: #5277c3 !important;
 }
@@ -12,6 +18,14 @@
 
 .nixos-light-text {
   color: #7ebae4 !important;
+}
+
+.nixos-sponsors {
+    padding: 40px 0px;
+}
+
+.nixos-sponsor img{
+    max-height: 50px;
 }
 
 .container {
