@@ -5,27 +5,31 @@
 }
 
 .nixos-dark {
-  background-color: #5277c3 !important;
+  background-color: #5277c3;
 }
 
 .nixos-dark-text {
-  color: #5277c3 !important;
+  color: #5277c3;
 }
 
 .nixos-light {
-  background-color: #7ebae4 !important;
+  background-color: #7ebae4;
 }
 
-.nixos-light-text {
-  color: #7ebae4 !important;
+.nixos-light-text, a {
+  color: #757575;
 }
 
-.nixos-sponsors {
-    padding: 40px 0px;
+.header {
+    font-weight: 700;
+}
+
+.nixos-sponsor {
+    padding: 20px 0px;
 }
 
 .nixos-sponsor img{
-    max-height: 50px;
+    max-height: 60px;
 }
 
 .container {
