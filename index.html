@@ -9,6 +9,7 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/default.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" media="screen,projection" />
 </head>
 
 <body>
@@ -18,24 +19,25 @@
       <a href="./" class="brand-logo">NixCon 2017</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="https://twitter.com/nixos_muc"><i class="fa fa-twitter fa-fw"></i></a></li>
+        <li><a href="https://twitter.com/nixcon2017"><i class="fa fa-twitter fa-fw"></i></a></li>
       </ul>
       <ul id="mobile-demo" class="side-nav">
-        <li><a href="https://twitter.com/nixos_muc"><i class="fa fa-twitter fa-fw"></i></a></li>
+        <li><a href="https://twitter.com/nixcon2017"><i class="fa fa-twitter fa-fw"></i></a></li>
       </ul>
     </div>
   </nav>
 
   <!--h1>index</h1-->
-  <div class="container" style="text-align: center; margin-left: auto; margin-right: auto; width: 300px;">
-  <img src="./images/nixos-logo.png" width="300" style="margin-top: 4em; margin-bottom: 0em;" />
+  <div class="container" style="text-align: center; margin-left: auto; margin-right: auto;margin-bottom:0em;">
+  <img src="./images/nixos-logo.png" class="responsive-img nixos-logo" width="300" style="margin-top: 4em; margin-bottom: 0em;" />
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col s12 m12">
       <h1 class="header center nixos-dark-text">NixCon 2017</h1>
-      <h3 class="header center light">Munich, October 28–31</h3>
+      <h3 class="center light">Munich, October 28–31 2017</h3>
+      <h3 class="center light">Conference + Hackathon</h3>
     </div>
   </div>
 </div>
@@ -44,17 +46,20 @@
 <div class="container">
   <div class="row">
     <div class="col s12 m12">
-      <h3 class="header center nixos-dark-text">Schedule</h3>
+      <h3 class="header center nixos-dark-text">Sponsors</h3>
+      <!--h5 class="center nixos-light-text"><a href="sponsoring.html">How to become a sponsor?</a></h5-->
     </div>
   </div>
-  <div class="row">
-    <div class="col s12 m6">
-      <h5 class="header center">Saturday &amp; Sunday: Conference Days</h5>
-      <p class="block"></p>
+  <div class="row nixos-sponsor">
+    <div class="col s12 center nixos-sponsor">
+      <img src="./images/TNG400x64.gif" class="responsive-img" />
+      <h6>(Location &amp; Luch Sponsor)</h6>
     </div>
-    <div class="col s12 m6">
-      <h5 class="header center">Monday &amp; Tuesday: Hackathon</h5>
-      <p class="block"></p>
+  </div>
+  <div class="row nixos-sponsor">
+    <div class="col s12 center">
+      <img src="./images/innoq.png" class="responsive-img" />
+      <h6>(Gold Sponsor)</h6>
     </div>
   </div>
 </div>
@@ -64,7 +69,7 @@
     <!-- Begin MailChimp Signup Form -->
     <div class="col s12 m12">
       <h3 class="header center nixos-dark-text">Newsletter</h3>
-      <h5 class="header center light">Stay informed about updates of date, location and program</h5>
+      <h5 class="center light">Stay informed about updates of date, location and program</h5>
     </div>
     <div class="col s12 m4 offset-m4">
       <form action="//nixcon.us15.list-manage.com/subscribe/post?u=4805449ebcaf472d769ea881e&amp;id=78a6af2b0b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
@@ -75,7 +80,7 @@
         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4805449ebcaf472d769ea881e_78a6af2b0b" tabindex="-1" value></div>
         <input type="email" placeholder="mail@example.com" value name="EMAIL" class="required email" id="mce-EMAIL" />
-        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-large nixos-dark">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-large nixos-light">
       </form>
     </div>
     <!--End mc_embed_signup-->
@@ -91,8 +96,20 @@
   <div class="row">
     <div class="col s12 m12">
       <h3 class="header center nixos-dark-text">Contact</h3>
-      <h5 class="header center light">orgateam (at) nixcon2017.org</h5>
+      <h5 class="center light">orgateam (at) nixcon2017.org</h5>
     </div>
+  </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAglk6JlBoeA5hmWwdCBQ__rcZzbxvkB0"></script>
+<div id="map_wrapper">
+  <div id="map"></div>
+  <div id="map_overlay">
+    <img class="responsive-img" src="images/TNG400x64.gif" style="width: 200px;" alt="TNG Technology Consulting">
+    <p class="lead">
+      Betastraße 13a<br />
+      85774 Unterföhring<br />
+    </p>
   </div>
 </div>
 

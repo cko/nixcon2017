@@ -8,8 +8,8 @@ $( document ).ready(function(){
 function initialize() {
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
-        center: new google.maps.LatLng(48.12, 11.60),
-        zoom: 15,
+        center: new google.maps.LatLng(48.19, 11.6472),
+        zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -29,13 +29,9 @@ function initialize() {
             ]
         }
     ];
-    var styledMap = new google.maps.StyledMapType(styles,
-        {name: "Styled Map"});
-    map.mapTypes.set('map_style', styledMap);
-    map.setMapTypeId('map_style');
 
     var marker = new google.maps.Marker({
-        position: {lat: 48.1238228, lng: 11.6059726},
+        position: {lat: 48.1861991, lng: 11.6547822},
         map: map
     });
 }
