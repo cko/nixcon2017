@@ -16,12 +16,25 @@
   background-color: #7ebae4;
 }
 
-.nixos-light-text, a {
+a {
   color: #757575;
+  font-weight: 700;
 }
 
 .header {
     font-weight: 700;
+}
+
+footer.page-footer {
+  background-color: #757575;
+}
+
+footer .container {
+  margin-bottom: 0px;
+}
+
+footer .row {
+  margin-bottom: 0px;
 }
 
 .nixos-sponsor {
