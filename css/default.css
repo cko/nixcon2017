@@ -1,7 +1,7 @@
 .nixos-logo:hover {
     cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.3s ease-in-out 0s;
+    transform: rotate(120deg);
+    transition: all 1s ease-in-out 0s;
 }
 
 #nixcon-logo {
@@ -25,8 +25,19 @@
 }
 
 a {
-  color: #999999;
   font-weight: 500;
+}
+
+nav a {
+    color: #999999;
+}
+
+#content a {
+    color: #5277c3;
+}
+
+footer a {
+    color: white;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -47,6 +58,7 @@ footer .container {
 
 footer .row {
   margin-bottom: 0px;
+  padding-bottom: 20px;
 }
 
 .nixos-sponsor {
