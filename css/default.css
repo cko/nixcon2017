@@ -53,12 +53,34 @@ footer .row {
     padding: 20px 0px;
 }
 
-.nixos-sponsor img{
-    max-height: 60px;
-}
-
 .container {
   margin-bottom: 8em;
+}
+
+@media only screen and (min-width: 993px) {
+  .nixos-sponsor .card {
+    height: 300px;
+  }
+
+  .card {
+    height: 275px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .nixos-sponsor .card {
+    height: 380px;
+  }
+
+  .card {
+    height: 275px;
+  }
+}
+
+.card .card-image img {
+  width: auto;
+  max-height: 100px;
+  padding: 24px 24px 0px 24px;
 }
 
 #map {
