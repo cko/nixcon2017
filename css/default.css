@@ -1,7 +1,8 @@
-.nixos-logo:hover {
-    cursor: default;
-    transform: rotate(120deg);
-    transition: all 1s ease-in-out 0s;
+
+h1 {
+  font-size: 9rem;
+  margin-bottom: 8rem;
+  word-wrap: break-word;
 }
 
 #nixcon-logo {
@@ -10,6 +11,18 @@
   margin-right: auto;
   margin-bottom:0em;
   width:300px;
+}
+
+.icon-block .fa {
+  font-size: 4rem;
+}
+
+.iris {
+    background-image: url("/images/nixos-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 8rem;
 }
 
 .nixos-dark {
@@ -40,12 +53,17 @@ footer a {
     color: white;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    font-weight: 700;
+a, nav a, nav ul a {
+  color: #5277c3;
+  font-weight: 500;
 }
 
 .header {
     font-weight: 700;
+}
+
+h5.header {
+    font-size: 1.5rem;
 }
 
 footer.page-footer {
