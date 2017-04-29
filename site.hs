@@ -30,6 +30,7 @@
       match (fromList ["impressum.md"]) $ do
           route   $ setExtension "html"
           compile $ pandocCompiler
+              >>= loadAndApplyTemplate "templates/container.html" defaultContext
               >>= loadAndApplyTemplate "templates/default.html" defaultContext
               >>= relativizeUrls
 

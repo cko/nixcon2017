@@ -4,6 +4,14 @@
     transition: all 0.3s ease-in-out 0s;
 }
 
+#nixcon-logo {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:0em;
+  width:300px;
+}
+
 .nixos-dark {
   background-color: #5277c3;
 }
@@ -17,8 +25,12 @@
 }
 
 a {
-  color: #757575;
-  font-weight: 700;
+  color: #999999;
+  font-weight: 500;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: 700;
 }
 
 .header {
