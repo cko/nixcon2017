@@ -1,5 +1,12 @@
+function emailReplace (){
+    var m = "orgateam" + String.fromCharCode(64) + "nixcon2017.org";
+    document.getElementById("contactEmail").innerHTML = m;
+    document.getElementById("contactEmail").href = "mailto:" + m;
+}
+
 $( document ).ready(function(){
-     $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav();
+    emailReplace();
 });
 
 
