@@ -93,7 +93,7 @@ footer .row {
   }
 
   .card {
-    height: 275px;
+    height: 265px;
   }
 }
 
@@ -103,7 +103,7 @@ footer .row {
   }
 
   .card {
-    height: 275px;
+    height: 305px;
   }
 }
 
@@ -111,6 +111,10 @@ footer .row {
   width: auto;
   max-height: 100px;
   padding: 24px 24px 0px 24px;
+}
+
+.card ul {
+  margin-top: 0px;
 }
 
 #map {
