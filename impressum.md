@@ -3,7 +3,7 @@
 Angaben gemäß § 5 TMG:
 
 **Kontakt:**
-E-Mail: info@mnug.de
+E-Mail: orgateam@nixcon2017.org
 
 _Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:_
 
