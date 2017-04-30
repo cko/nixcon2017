@@ -17,6 +17,10 @@ h1 {
   word-wrap: break-word;
 }
 
+h1, h2, h3 {
+  color: #616161;
+}
+
 #nixcon-logo {
   text-align: center;
   margin-left: auto;
@@ -33,15 +37,6 @@ h1 {
 
 .icon-block .fa {
   font-size: 4rem;
-}
-
-.iris {
-    /*background-image: url("/images/background2.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 8rem;
-    /*background-color: #5277c3;*/
 }
 
 .nixos-dark {

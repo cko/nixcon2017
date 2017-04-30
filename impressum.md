@@ -1,4 +1,4 @@
-# Imprint
+## Imprint
 
 Angaben gemäß § 5 TMG:
 
