@@ -1,7 +1,7 @@
 
 h1 {
   font-size: 9rem;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
   word-wrap: break-word;
 }
 
@@ -85,7 +85,7 @@ footer .row {
 }
 
 .container {
-  margin-bottom: 8em;
+  margin-bottom: 6em;
 }
 
 @media only screen and (min-width: 993px) {
