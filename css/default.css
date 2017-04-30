@@ -23,6 +23,7 @@ h1 {
     background-size: cover;
     background-position: center;
     margin-bottom: 8rem;
+    /*background-color: #5277c3;*/
 }
 
 .nixos-dark {
@@ -59,7 +60,7 @@ a, nav a, nav ul a {
 }
 
 .header {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h5.header {
@@ -67,7 +68,7 @@ h5.header {
 }
 
 footer.page-footer {
-  background-color: #757575;
+  background-color: #616161;
 }
 
 footer .container {
