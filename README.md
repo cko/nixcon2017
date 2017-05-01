@@ -1,4 +1,4 @@
-![Travis Build Status](https://travis-ci.org/cko/nixcon2017.svg?branch=master)
+<a href="https://travis-ci.org/cko/nixcon2017"><img src="https://travis-ci.org/cko/nixcon2017.svg?branch=master"></a>
 
 # Website for NixCon 2017
 
