@@ -3,7 +3,7 @@ language: nix
 
 deploy:
   provider: script
-  script: ./travis-deployment/deploy-to-ghpages.sh
+  script: ./travis-deployment/deploy-to-gh-pages.sh
   skip_cleanup: true
   branch: master
 
