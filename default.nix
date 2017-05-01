@@ -12,8 +12,6 @@ pkgs.stdenv.mkDerivation {
     ]))
   ];
 
-  phases = [ "unpackPhase" "buildPhase" "installPhase" ];
-
   LC_ALL = "en_US.UTF-8";
 
   buildPhase = ''

@@ -1,14 +1,12 @@
 language: nix
-
-
+after_success:
+- chmod +x ./travis-deployment/deploy-to-gh-pages.sh
 deploy:
   provider: script
-  script: ./travis-deployment/deploy-to-gh-pages.sh
+  script: "./travis-deployment/deploy-to-gh-pages.sh"
   skip_cleanup: true
   branch: master
-
-
 env:
- global:
-   - GH_REF: github.com/cko/nixcon2017.git
-   - secure: "e1kkxgSQpRbYtaBnQZqhHIlERtvdHEjFtnBEJpzQInq4zv1TO8a6x5VfTDeayUYacB7kzPcxdT0RtbfbVqWON6283XEJnGEvA4NuB6mX2qMJTKjIMnN3usFpFHS6zPHwdLmq9TveqxdJ33WDgMXmVUpLyImYfB/8v+BHd2f8/UJ0XEpNWfNCKifwxfMzg283KgPBfNUPyRcqVCTdBc9buZgZE+MOt13RBCE6U5i5OxlZLhlIR8dc6abojyJ7p8X6MooDHZ8cHnNyiZEujzUHU1LTMnpy6M28lhV3JS1WPl4rksChy0pRQqUMlE90v4klh31yxhUpJmHSgQoexfk2fmHHwVPN0pgdWlTzzIF13uDmokwYIkOleXZTShgmi72xziJfUa44y5DcJ38bGOQum74FIKDeV6cKB9+9GBehKu+AQ3giRIMZnVn+U7UWYJD6m0I1BW/PlryEwdCKzrd06Yrq/WvhgIT4vBtGwSzeq8Ru2PCcK/7l5N+KxE74deCtIJDKWpNVmhDntOV/0B8SbXP0iHNnfspyknt//QHBlbNQRRAs/sTGU9wnM3TNZmslzoetCLgd7IXpIXiTBfDsmhB8CdQE6QoBX/aZVgu5mZqWykC84ZaeS7sTpKOxPKCn52PyN+P7XX9hqS3X1VZBB1RgdQ655g4M1WS7kRQoU8I="
+  global:
+  - GH_REF: github.com/cko/nixcon2017.git
+  - secure: WrQhaO2lq4g+w4yX4PkoBPMTb4a2hGsJGTu/Nn3NdjTPneJSshVwA8jxOw9rjsxAFiwGGWPt1FPVlxoRR878Z4Ar17zBMKhMQs3t8v53npEkIZiMQqzRtS2Z0Ams3DyI3mEOW4/W0AfgFMlptnuQNLFUcT5vqZwXnBLlPDmJM53gXXEQaFrkpg8UVwF/lUvtpD+mFN9y8tyhtHp/hhQjIbNQDsCRWOCzCp9Czr72YbUKcER7/TFDxXBvHdrfPoHct8vH+MqsPoYfaWVL+vsvs/Kodj+wEP0lvT1naDpIvpoZWuW8odPzl0k7jFchRFQ07PWDNEE2SVRibsCxHnnU2swvdOctDzSJG76ebag/u8VtkUoXZTvK5UUI5jXkkDr9GMZuvdHaisSSL9dxDRNaPzIiS3Bfaa7MD+ezkajzv9cMXiI/IVgFX+x9MuP8h07yPbM3scwTB/hI1Er4FovIYxfg+/3/vB9BroLflR+0NSqoh1YITl5xjyAHZjfZna77sPXb/4qX7YKQ4U8coAZLsgK63stmAiotI4yIAzeYs3BtRP5Va1ktbH7mGk56dYGVhK6mwCzM43vKRK4khBpGoPnYLLqo02Y4vrAhyJmmg6Stu0GcJGWyqSn1bMBD3SKppvAXi4OauUqq1nr6V/a6XPZltAq2UXU1R5eviMrDST4=
