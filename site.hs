@@ -15,9 +15,13 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
-    match "images/*" $ do
+    match "**/images/*" $ do
         route   idRoute
         compile copyFileCompiler
+
+    match "*.json" $ do
+            route   idRoute
+            compile copyFileCompiler
 
     match "js/*" $ do
             route   idRoute
