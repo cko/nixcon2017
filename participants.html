@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NixCon 2017 - A conference about Nix and NixOS</title>
+  <meta name="description" content="NixCon 2017 - A conference about Nix and NixOS">
+  <meta name="keywords" content="munich, münchen, linux, nix, nixos, conference">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/default.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" media="screen,projection" />
+  <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+</head>
+
+<body>
+
+
+  <nav class="white">
+    <div class="nav-wrapper container">
+      <a href="./" class="brand-logo">NixCon 2017</a>
+      <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!--li><a href="">Sponsoring</a></li-->
+        <li><a href="./">Home</a></li>
+        <li><a href="./#cfp">CfP</a></li>
+        <li><a href="./#newsletter">Newsletter</a></li>
+        <li><a href="./#sponsors">Sponsors</a></li>
+        <li><a href="./#location">Location</a></li>
+        <li><a href="https://nixos.github.io/nixcon/2015/index.html">2015</a></li>
+        <li><a href="https://twitter.com/nixcon2017"><i class="fa fa-twitter fa-fw"></i></a></li>
+      </ul>
+      <ul id="mobile" class="side-nav">
+        <!--li><a href="">Sponsoring</a></li-->
+        <li><a href="./">Home</a></li>
+        <li><a href="./#cfp">CfP</a></li>
+        <li><a href="./#newsletter">Newsletter</a></li>
+        <li><a href="./#sponsors">Sponsors</a></li>
+        <li><a href="./#location">Location</a></li>
+        <li><a href="https://nixos.github.io/nixcon/2015/index.html">2015</a></li>
+        <li><a href="https://twitter.com/nixcon2017"><i class="fa fa-twitter fa-fw"></i></a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!--h1>participants</h1-->
+  <div id="content">
+    <br />
+      <script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12">
+      <h2 class="header center grey-text text-darken-2">Participants</h2>
+    </div>
+  </div>
+
+  <div id="participants" class="row">
+
+  </div>
+</div>
+
+
+<script id="participant-template" type="text/x-handlebars-template">
+  <div class="col s12 m6 l3">
+    <div class="card medium">
+      <div class="card-image">
+        {{#if urls.photo}}
+           <img class="activator" src="{{urls.photo}}">
+        {{else}}
+           <img class="activator" src="/img/nophoto.png">
+        {{/if}}
+      </div>
+      <div class="card-content">
+        <span class="card-title activator">{{name}}</span>
+        {{#if company}}
+           <p>{{company}}</p>
+        {{/if}}
+      </div>
+      <div class="card-action">
+        {{#if urls.homepage}}
+        <a href="{{urls.homepage}}"><i class="fa fa-home fa-fw"/></a>
+        {{/if}}
+        {{#if urls.github}}
+        <a href="{{urls.github}}"><i class="fa fa-github fa-fw"/></a>
+        {{/if}}
+        {{#if urls.twitter}}
+        <a href="{{urls.twitter}}"><i class="fa fa-twitter fa-fw"/></a>
+        {{/if}}
+        {{#list tags}}
+           <span style="margin-right:10px;">#{{ this }}</span>
+        {{/list}}
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/javascript">
+window.onload = function() {
+  $.getJSON("/participants.json", function(data) {
+    var items = [];
+    var sum = 0;
+    var sum_conference = 0;
+    var sum_hackathon = 0;
+    $.each(data, function(index, participant) {
+      var source = $("#participant-template").html();
+      var template = Handlebars.compile(source);
+      var card = template(participant);
+      items.push(card);
+      sum++;
+      if(participant.when.conference) sum_conference++;
+      if(participant.when.hackathon) sum_hackathon++;
+    });
+    $("#participants").append(items.join(""));
+    $("#sum").append(sum+" participants");
+    $("#sum_conference").append(sum_conference+" participants on conference (max. 100)");
+    $("#sum_hackathon").append(sum_hackathon+" participants on hackathon (max. 100)");
+  });
+Handlebars.registerHelper('list', function(context, options) {
+  var ret = "";
+  for(var i=0, j=context.length; i<j; i++) {
+    ret = ret + options.fn(context[i]);
+  }
+  return ret;
+});
+};
+</script>
+
+      <br />
+  </div>
+
+
+  <footer class="page-footer">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5 class="white-text">Contact</h5>
+                  <a href="javascript:emailReplace()" id="contactEmail">
+                      orgateam (at) nixcon2017.org
+                  </a>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                  <ul>
+                      <li><a class="grey-text text-lighten-4" href="impressum.html">Imprint</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <script>
+  </script>
+</body>
+</html>
