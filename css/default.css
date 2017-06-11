@@ -124,6 +124,11 @@ footer .row {
   padding: 24px 24px 0px 24px;
 }
 
+.card .speaker-image img {
+    width: auto;
+    max-height: 140px;
+}
+
 .card ul {
   margin-top: 0px;
 }
