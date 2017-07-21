@@ -1,6 +1,3 @@
 [
-  {"name":"Christine Koppelt","company":"innoQ","tags":["orga"],"when":{"conference":true,"hackathon":true},"urls":{"photo":"/participants/images/nophoto.png","homepage":"","github":"","twitter":""}},
-  {"name":"Maximilian Huber","company":"TNG Technology Consulting","tags":["orga"],"when":{"conference":true,"hackathon":true},"urls":{"photo":"/participants/images/nophoto.png","homepage":"","github":"","twitter":""}},
-  {"name":"Cillian de Róiste","company":"","tags":["orga"],"when":{"conference":true,"hackathon":true},"urls":{"photo":"/participants/images/nophoto.png","homepage":"","github":"","twitter":""}},
-  {"name":"Domen Kožar","company":"Enlambda","tags":["speaker"],"when":{"conference":true,"hackathon":true},"urls":{"photo":"/participants/images/nophoto.png","homepage":"https://www.domenkozar.com/","github":"https://github.com/domenkozar/","twitter":"https://twitter.com/iElectric"}}
+  {"name":"Christine Koppelt","company":"innoQ","tags":["orga"],"when":{"conference":true,"hackathon":true},"urls":{"photo":"/participants/images/nophoto.png","homepage":"","github":"","twitter":""}}
 ]
