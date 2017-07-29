@@ -19,9 +19,17 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "contributors.txt" $ do
+            route   idRoute
+            compile copyFileCompiler
+
     match "*.json" $ do
             route   idRoute
             compile copyFileCompiler
+
+    match "participants/**/*" $ do
+        route idRoute
+        compile copyFileCompiler
 
     match "js/*" $ do
             route   idRoute
