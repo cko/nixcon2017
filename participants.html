@@ -81,6 +81,12 @@
            <p>{{company}}</p>
         {{/if}}
       </div>
+      <div class="card-reveal">
+        <span class="card-title activator">{{name}}<i class="material-icons right">close</i></span>
+        {{#if about}}
+        <p>{{about}}</p>
+        {{/if}}
+      </div>
       <div class="card-action">
         {{#if urls.homepage}}
         <a href="{{urls.homepage}}"><i class="fa fa-home fa-fw"/></a>
@@ -102,7 +108,7 @@
 
 <script type="text/javascript">
 window.onload = function() {
-  $.getJSON("/participants.json", function(data) {
+  $.getJSON("https://registration.nixcon2017.org/static/participants.json", function(data) {
     var items = [];
     var sum = 0;
     var sum_conference = 0;
