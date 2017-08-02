@@ -100,7 +100,7 @@ footer .row {
 
 @media only screen and (min-width: 993px) {
   .nixos-sponsor .card {
-    height: 300px;
+    height: 315px;
   }
 
   .card {
@@ -110,7 +110,7 @@ footer .row {
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
   .nixos-sponsor .card {
-    height: 380px;
+    height: 395px;
   }
 
   .card {

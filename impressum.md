@@ -7,9 +7,9 @@ E-Mail: orgateam@nixcon2017.org
 
 _Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:_
 
-**TNG Technology Consulting GmbH**
-Betastraße 13a
-85774 Unterföhring
+**innoQ Deutschland GmbH**
+Kreuzstr. 16
+80331 München
 
 **Haftung für Inhalte**
 
