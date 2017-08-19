@@ -118,7 +118,7 @@ footer .row {
   }
 }
 
-.card .card-image img {
+.nixos-sponsor .card .card-image img {
   width: auto;
   max-height: 100px;
   padding: 24px 24px 0px 24px;
@@ -127,6 +127,11 @@ footer .row {
 .card .speaker-image img {
     width: auto;
     max-height: 140px;
+}
+
+#participants .card-image {
+  width: auto;
+  max-height: 65%;
 }
 
 .card ul {
