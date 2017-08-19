@@ -134,6 +134,14 @@ footer .row {
   max-height: 65%;
 }
 
+#participants .card-content {
+  padding: 12px;
+}
+
+#participants .card-action {
+  padding: 12px;
+}
+
 .card ul {
   margin-top: 0px;
 }
