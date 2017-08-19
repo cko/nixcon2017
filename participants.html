@@ -69,22 +69,22 @@
 
 <script type="text/javascript">
 window.onload = function() {
-  $.getJSON("https://registration.nixcon2017.org/static/participants.json", function(data) {
+  $.getJSON("/participants.json", function(data) {
     var items = [];
-    var sum = 0;
     var sum_conference = 0;
     var sum_hackathon = 0;
+    data.sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
     $.each(data, function(index, participant) {
       var source = $("#participant-template").html();
       var template = Handlebars.compile(source);
       var card = template(participant);
       items.push(card);
-      sum++;
       if(participant.when.conference) sum_conference++;
       if(participant.when.hackathon) sum_hackathon++;
     });
     $("#participants").append(items.join(""));
-    $("#sum").append(sum+" participants");
     $("#sum_conference").append("Conference: " + sum_conference+" Participants");
     $("#sum_hackathon").append("Hackathon: " + sum_hackathon+" Participants");
   });
