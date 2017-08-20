@@ -24,7 +24,7 @@
 
 
 <script id="participant-template" type="text/x-handlebars-template">
-  <div class="col s12 m6 l3">
+  <div class="col s12 m4 l3 xl2">
     <div class="card medium">
       <div class="card-image">
         {{#if urls.photo}}
@@ -32,8 +32,11 @@
         {{else}}
            <img class="activator" src="/img/nophoto.png">
         {{/if}}
+        {{#isOrga roles}}
+           <div class="ribbon ribbon-orga">Orga</div>
+        {{/isOrga}}
         {{#isSpeaker roles}}
-           <div class="ribbon">Speaker</div>
+           <div class="ribbon ribbon-speaker">Speaker</div>
         {{/isSpeaker}}
       </div>
       <div class="card-content">
@@ -90,6 +93,13 @@ window.onload = function() {
   });
   Handlebars.registerHelper("isSpeaker", function(myArray,options) {
     if (myArray !== undefined && myArray.indexOf("speaker") > -1) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
+  Handlebars.registerHelper("isOrga", function(myArray,options) {
+    if (myArray !== undefined && myArray.indexOf("orga") > -1) {
       return options.fn(this);
     } else {
       return options.inverse(this);

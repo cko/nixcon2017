@@ -149,22 +149,35 @@ footer .row {
   text-align:center;
   white-space:nowrap;
   overflow:hidden;
-  transform-origin:0 100%;
   box-shadow:0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
-  background-color:#ffeb3b;
   color:rgba(0,0,0,0.9);
   height:30px;
-  width:150px;
+  width:120px;
   top:-30px;
-  transform:rotateZ(45deg);
   padding-left:30px;
   padding-right:30px;
   line-height:30px;
-  right:-43.933982822018px;
+  letter-spacing: 0.5px;
+}
+
+.ribbon-speaker {
+  transform-origin:0 100%;
+  transform:rotateZ(45deg);
   -webkit-transform:rotateZ(45deg);
   -moz-transform:rotateZ(45deg);
   -o-transform:rotateZ(45deg);
-  letter-spacing: 1px;
+  right:-35.147186px;
+  background-color:#ffeb3b;
+}
+
+.ribbon-orga {
+  transform-origin:100% 100%;
+  transform:rotateZ(315deg);
+  -webkit-transform:rotateZ(315deg);
+  -moz-transform:rotateZ(315deg);
+  -o-transform:rotateZ(315deg);
+  left:-35.147186px;
+  background-color:#00eb3b;
 }
 
 .card ul {
