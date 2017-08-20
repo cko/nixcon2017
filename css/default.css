@@ -131,7 +131,7 @@ footer .row {
 
 #participants .card-image {
   width: auto;
-  max-height: 65%;
+  max-height: 60%;
 }
 
 #participants .card-content {
@@ -140,6 +140,31 @@ footer .row {
 
 #participants .card-action {
   padding: 12px;
+}
+
+.ribbon{
+  position:absolute;
+  padding:0;
+  margin:0;
+  text-align:center;
+  white-space:nowrap;
+  overflow:hidden;
+  transform-origin:0 100%;
+  box-shadow:0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+  background-color:#ffeb3b;
+  color:rgba(0,0,0,0.9);
+  height:30px;
+  width:150px;
+  top:-30px;
+  transform:rotateZ(45deg);
+  padding-left:30px;
+  padding-right:30px;
+  line-height:30px;
+  right:-43.933982822018px;
+  -webkit-transform:rotateZ(45deg);
+  -moz-transform:rotateZ(45deg);
+  -o-transform:rotateZ(45deg);
+  letter-spacing: 1px;
 }
 
 .card ul {
