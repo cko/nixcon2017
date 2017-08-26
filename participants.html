@@ -131,7 +131,7 @@ window.onload = function() {
     data.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
-    data.forEach(function(index, participant) {
+    $.each(data, function(index, participant) {
       var source = $("#participant-template").html();
       var template = Handlebars.compile(source);
       var card = template(participant);
