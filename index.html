@@ -1,4 +1,4 @@
-
+<script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
 <div class="container">
 <div id="nixcon-logo">
   <img src="/images/nixos-logo.png" class="responsive-img nixos-logo" width="300" style="margin-top: 2em; margin-bottom: 0em;" />
@@ -67,7 +67,18 @@
       <h3 class="header center grey-text text-darken-2">Program</h3>
     </div>
     <div class="col s12 m12">
-      <h4 class="header center grey-text text-darken-2">Saturday &amp; Sunday: Conference Days</h4>
+      <h4 class="header center grey-text text-darken-2">Saturday</h4>
+      <table class="bordered">
+         <thead></thead>
+         <tbody id="saturday"></tbody>
+      </table>
+    </div>
+    <div class="col s12 m12">
+      <h4 class="header center grey-text text-darken-2">Sunday</h4>
+      <table class="bordered">
+         <thead></thead>
+         <tbody id="sunday"></tbody>
+      </table>
     </div>
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Monday &amp; Tuesday: Hackathon</h4>
@@ -80,6 +91,44 @@
     </div>
   </div>
 </div>
+
+<script id="talk-template" type="text/x-handlebars-template">
+  <tr>
+    <td class="flow-text">
+         {{ title }} {{#if subtitle}} - {{ subtitle }} {{/if}}
+         {{#if persons}}
+            by {{#each persons}}
+                {{ public_name }} {{#unless @last}}, {{/unless}}
+            {{/each}}
+         {{/if}}
+    </td>
+  </tr>
+</script>
+
+
+<script type="text/javascript">
+window.onload = function() {
+  $.getJSON("https://schedule.nixcon2017.org/en/nixcon2017/public/schedule.json", function(data) {
+    var talks_saturday = data.schedule.conference.days[0].rooms.Unterwelt;
+    var talks_sunday = data.schedule.conference.days[1].rooms.Unterwelt;
+    generate_talk_entries(talks_saturday, "#saturday")
+    generate_talk_entries(talks_sunday, "#sunday");
+  });
+}
+
+var generate_talk_entries = function (talks, day_id){
+  var items = [];
+  items.push("<tr></tr>")
+  talks.forEach(function(talk, index){
+    var source = $("#talk-template").html();
+    var template = Handlebars.compile(source);
+    var entry = template(talk);
+    items.push(entry);
+  });
+  $(day_id).append(items.join(""));
+}
+  </script>
+
 
 <a name="newsletter"></a>
 <div class="container">

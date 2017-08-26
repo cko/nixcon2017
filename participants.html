@@ -79,7 +79,7 @@ window.onload = function() {
     data.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
-    $.each(data, function(index, participant) {
+    data.forEach(function(index, participant) {
       var source = $("#participant-template").html();
       var template = Handlebars.compile(source);
       var card = template(participant);
