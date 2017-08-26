@@ -146,11 +146,11 @@
 
 <script id="talk-template" type="text/x-handlebars-template">
   <tr>
-    <td class="flow-text">
+    <td>
          {{ title }} {{#if subtitle}} - {{ subtitle }} {{/if}}
          {{#if persons}}
             by {{#each persons}}
-                {{ public_name }} {{#unless @last}}, {{/unless}}
+                {{ public_name }} {{#unless @last}} and {{/unless}}
             {{/each}}
          {{/if}}
     </td>
