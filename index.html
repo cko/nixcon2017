@@ -101,12 +101,14 @@
 <script id="talk-template" type="text/x-handlebars-template">
   <tr>
     <td>
+      <a href="https://schedule.nixcon2017.org/en/nixcon2017/public/events/{{ id }}">
          {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
          {{#if persons}}
             by {{#each persons}}
                 {{ public_name }} {{#unless @last}} and {{/unless}}
             {{/each}}
          {{/if}}
+      </a>
     </td>
   </tr>
 </script>
