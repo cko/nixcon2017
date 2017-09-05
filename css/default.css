@@ -60,7 +60,7 @@ nav a {
     color: #999999;
 }
 
-#content a {
+#content a, #content .headline {
     color: #5277c3;
 }
 
@@ -116,6 +116,15 @@ footer .row {
   .card {
     height: 355px;
   }
+}
+
+.collapsible-header .time {
+    width: 8rem;
+    line-height: 3rem;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-right: 1rem;
 }
 
 .nixos-sponsor .card .card-image img {

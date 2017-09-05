@@ -69,20 +69,16 @@
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Saturday</h4>
       <h5 class="header center grey-text text-darken-2">Preliminary Schedule</h5>
-      <table class="bordered">
-         <thead></thead>
-         <tbody id="saturday"></tbody>
-      </table>
+      <ul class="collapsible" id="saturday" data-collapsible="accordion">
+      </ul>
     </div>
   </div>
   <div class="row">
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Sunday</h4>
       <h5 class="header center grey-text text-darken-2">Preliminary Schedule</h5>
-      <table class="bordered">
-         <thead></thead>
-         <tbody id="sunday"></tbody>
-      </table>
+      <ul class="collapsible" id="sunday" data-collapsible="accordion">
+      </ul>
     </div>
   </div>
   <div class="row">
@@ -99,20 +95,23 @@
 </div>
 
 <script id="talk-template" type="text/x-handlebars-template">
-  <tr>
-    <td>
+  <li>
+    <div class="collapsible-header">
+      <span class="time">
          {{#timeprint start duration }}
          {{/timeprint}}
-    </td>
-    <td>
+      </span>
+      <span class="headline">
          {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
          {{#if persons}}
             by {{#each persons}}
                 {{ public_name }} {{#unless @last}} and {{/unless}}
             {{/each}}
          {{/if}}
-    </td>
-  </tr>
+      </span>
+    </div>
+    <div class="collapsible-body"><p>{{ abstract }}</p><p>{{ description }}</p></div>
+  </li>
 </script>
 
 
@@ -137,7 +136,6 @@ window.onload = function() {
 
 var generate_talk_entries = function (talks, day_id){
   var items = [];
-  items.push("<tr></tr>")
   talks.forEach(function(talk, index){
     var source = $("#talk-template").html();
     var template = Handlebars.compile(source);
