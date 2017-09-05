@@ -68,7 +68,7 @@
     </div>
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Saturday</h4>
-      <h5 class="header center grey-text text-darken-2">Preliminary List of Talks</h5>
+      <h5 class="header center grey-text text-darken-2">Preliminary Schedule</h5>
       <table class="bordered">
          <thead></thead>
          <tbody id="saturday"></tbody>
@@ -78,7 +78,7 @@
   <div class="row">
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Sunday</h4>
-      <h5 class="header center grey-text text-darken-2">Preliminary List of Talks</h5>
+      <h5 class="header center grey-text text-darken-2">Preliminary Schedule</h5>
       <table class="bordered">
          <thead></thead>
          <tbody id="sunday"></tbody>
@@ -101,6 +101,10 @@
 <script id="talk-template" type="text/x-handlebars-template">
   <tr>
     <td>
+         {{#timeprint start duration }}
+         {{/timeprint}}
+    </td>
+    <td>
          {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
          {{#if persons}}
             by {{#each persons}}
@@ -119,6 +123,15 @@ window.onload = function() {
     var talks_sunday = data.schedule.conference.days[1].rooms.Unterwelt;
     generate_talk_entries(talks_saturday, "#saturday")
     generate_talk_entries(talks_sunday, "#sunday");
+  });
+
+  Handlebars.registerHelper('timeprint', function(startString, length) {
+    var startArray = startString.split(':');
+    var duration =  length.split(':');
+    var startTime = new Date (2017, 10, 28, startArray[0], startArray[1]);
+    var endTime = new Date (2017, 10, 28, startTime.getHours() + parseInt(duration[0]), startTime.getMinutes() + parseInt(duration[1]));
+    var result = startString +  ' – ' + endTime.getHours() + ':' +  ("0" + (endTime.getMinutes())).slice(-2);
+    return new Handlebars.SafeString(result);
   });
 }
 
