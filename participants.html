@@ -79,17 +79,17 @@ window.onload = function() {
     data.sort(function (a, b) {
       return a.name.localeCompare(b.name);
     });
+    var source = $("#participant-template").html();
+    var template = Handlebars.compile(source);
     $.each(data, function(index, participant) {
-      var source = $("#participant-template").html();
-      var template = Handlebars.compile(source);
       var card = template(participant);
       items.push(card);
       if(participant.when.conference) sum_conference++;
       if(participant.when.hackathon) sum_hackathon++;
     });
     $("#participants").append(items.join(""));
-    $("#sum_conference").append("Conference: " + sum_conference+" Participants");
-    $("#sum_hackathon").append("Hackathon: " + sum_hackathon+" Participants");
+    $("#sum_conference").append("Conference: " + sum_conference + " Participants");
+    $("#sum_hackathon").append("Hackathon: " + sum_hackathon + " Participants");
   });
   Handlebars.registerHelper("isSpeaker", function(myArray,options) {
     if (myArray !== undefined && myArray.indexOf("speaker") > -1) {

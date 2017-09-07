@@ -20,24 +20,24 @@ main = hakyll $ do
         compile copyFileCompiler
 
     match "contributors.txt" $ do
-            route   idRoute
-            compile copyFileCompiler
+        route   idRoute
+        compile copyFileCompiler
 
     match "*.json" $ do
-            route   idRoute
-            compile copyFileCompiler
+        route   idRoute
+        compile copyFileCompiler
 
     match "participants/**/*" $ do
         route idRoute
         compile copyFileCompiler
 
     match "js/*" $ do
-            route   idRoute
-            compile copyFileCompiler
+        route   idRoute
+        compile copyFileCompiler
 
     match "fonts/**/*" $ do
-            route   idRoute
-            compile copyFileCompiler
+        route   idRoute
+        compile copyFileCompiler
 
     match "css/*" $ do
         route   idRoute
@@ -52,10 +52,9 @@ main = hakyll $ do
 
     match "*.html" $ do
         route idRoute
-        compile $ do
-            getResourceBody
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
-                >>= relativizeUrls
+        compile $ getResourceBody
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
 
