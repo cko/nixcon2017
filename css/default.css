@@ -152,7 +152,7 @@ footer .row {
   max-height: 60%;
 }
 
-#participants .card-content {
+#hotels .card-content, #participants .card-content {
   padding: 12px;
 }
 
