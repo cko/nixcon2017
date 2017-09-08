@@ -1,6 +1,6 @@
 language: nix
 env:
-- NIX_PATH=nixpkgs=https://nixos.org/channels/nixos-unstable/nixexprs.tar.xz
+- NIX_PATH=nixpkgs=https://nixos.org/channels/nixos-17.03/nixexprs.tar.xz
 after_success:
 - chmod +x ./travis-deployment/deploy-to-gh-pages.sh
 deploy:
