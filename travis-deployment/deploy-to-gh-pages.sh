@@ -9,7 +9,7 @@ TMP_CHECKOUT_DIR=tmp/origin-gh-pages
 
   echo "deploy: checked out 'gh-pages' branch"
   rm -rf $TMP_CHECKOUT_DIR/*
-  cp -r result/* $TMP_CHECKOUT_DIR
+  cp -r _site/* $TMP_CHECKOUT_DIR
   cp CNAME $TMP_CHECKOUT_DIR
   cd $TMP_CHECKOUT_DIR
 
