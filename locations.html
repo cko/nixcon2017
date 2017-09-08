@@ -11,6 +11,7 @@
   <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/default.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" media="screen,projection" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel="shortcut icon" type="image/png" href="./favicon.png" />
 </head>
 
@@ -57,31 +58,40 @@
       <h3 class="header center grey-text text-darken-2">Locations</h3>
     </div>
   </div>
+  <a name="tng"></a>
   <div class="row">
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Location Saturday &amp; Sunday (Conference)</h4>
-      <div id="map_wrapper">
-        <div id="map"></div>
-        <div id="map_overlay">
+      <div class="map_wrapper">
+        <div class="map" id="tng-map"></div>
+        <div class="map_overlay">
           <img class="responsive-img" src="images/TNG400x74.gif" style="width: 250px;" alt="TNG Technology Consulting">
           <p class="lead">
             Betastraße 13a<br />
-            85774 Unterföhring<br />
+            85774 Unterföhring<br /><br />
+
+            Public Transport:<br />
+            Unterföhring (S8), 12min walk<br />
           </p>
         </div>
       </div>
     </div>
   </div>
+  <a name="cafe_netzwerk"></a>
   <div class="row">
     <div class="col s12 m12">
       <h4 class="header center grey-text text-darken-2">Location Monday (Hackathon)</h4>
-      <div id="map_wrapper">
-        <div id="map2"></div>
-        <div id="map_overlay2">
+      <div class="map_wrapper">
+        <div class="map" id="cafe-map"></div>
+        <div class="map_overlay">
           <p class="lead">
             Café Netzwerk<br />
             Luisenstr. 11<br />
-            80333 München<br />
+            80333 München<br /><br />
+
+            Public Transport:<br />
+            Königsplatz (U2)<br />
+            Hauptbahnhof (any S-Bahn or U1/2/4/5), 10 min walk<br />
           </p>
         </div>
       </div>
@@ -90,68 +100,89 @@
 </div>
 
 
-<div class="container">
+<div id="hotels" class="container">
   <div class="row">
     <div class="col s12 m12">
       <h3 class="header center grey-text text-darken-2">Hotel Recommendations</h3>
+      <p>Unterfoehring, where the conference talks take place, is reachable via the line S8. The S8 also goes through the city center
+        (Ostbahnhof, Marienplatz, Karlsplatz, Hauptbahnhof/Main Station etc ), any other accommodation nearby those would also be fine.</p>
     </div>
     <div class="row">
-      <div class="col s12 m4">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
+      <div class="col s6 m3">
+        <div class="card small">
+          <div class="card-content">
+            <span class="card-title">Wombat`s City Hostel</span>
+            <ul>
+              <li>Distance to airport: 50min</li>
+              <li>Distance to conference location: 40min</li>
+              <li>Distance to hackathon location: 10min</li>
+              <li>Distance to city center: 0min</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <a href="https://www.google.de/maps/place/wombats+CITY+HOSTEL+MUNICH/@48.1388153,11.5602489,15z/data=!4m5!3m4!1s0x0:0x304b8ce771fef15d!8m2!3d48.1388153!4d11.5602489">Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m3">
+        <div class="card small">
+          <div class="card-content">
             <span class="card-title">The K Munich Unterfoehring</span>
             <ul>
               <li>Distance to airport: 30min</li>
               <li>Distance to conference location: 3min</li>
-              <li>Distance to hackathon location: 40min</li>
-              <li>Distance to city center: 25min</li>
+              <li>Distance to hackathon location: 35min</li>
+              <li>Distance to city center: 30min</li>
             </ul>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
+            <a href="https://www.google.de/maps/place/Best+Western+Hotel+The+K/@48.1852446,11.6487083,17z/data=!4m12!1m6!3m5!1s0x479e74c05de3f58d:0x455f40e6b53b0b80!2sBest+Western+Hotel+The+K!8m2!3d48.185241!4d11.650897!3m4!1s0x479e74c05de3f58d:0x455f40e6b53b0b80!8m2!3d48.185241!4d11.650897">Google Maps</a>
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
+      <div class="col s6 m3">
+        <div class="card small">
+          <div class="card-content">
             <span class="card-title">Motel One Munich City East</span>
             <ul>
-              <li>Distance to airport:</li>
-              <li>Distance to conference location: </li>
-              <li>Distance to hackathon location:</li>
-              <li>Distance to city center:</li>
+              <li>Distance to airport: 40min</li>
+              <li>Distance to conference location: 35min</li>
+              <li>Distance to hackathon location: 20min</li>
+              <li>Distance to city center: 10min</li>
             </ul>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
+            <a href="https://www.google.de/maps/place/Hotel+Motel+One+M%C3%BCnchen+City+Ost/@48.1320329,11.6070748,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x479e757d828b2e07:0x99a197cb13e46a8!2sHotel+Motel+One+M%C3%BCnchen+City+Ost!8m2!3d48.1320293!4d11.6092635!3m4!1s0x479e757d828b2e07:0x99a197cb13e46a8!8m2!3d48.1320293!4d11.6092635">Google Maps</a>
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
+      <div class="col s6 m3">
+        <div class="card small">
+          <div class="card-content">
             <span class="card-title">ibis hotel Munich City East</span>
             <ul>
-              <li>Distance to airport:</li>
-              <li>Distance to conference location: </li>
-              <li>Distance to hackathon location:</li>
-              <li>Distance to city center:</li>
+              <li>Distance to airport: 45min</li>
+              <li>Distance to conference location: 40min</li>
+              <li>Distance to hackathon location: 30min</li>
+              <li>Distance to city center: 20min</li>
             </ul>
           </div>
           <div class="card-action">
-            <a href="#">This is a link</a>
+            <a href="https://www.google.de/maps/place/Hotel+ibis+M%C3%BCnchen+City+Ost/@48.1294228,11.6249085,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x479e755f89d2cac7:0x439ebe4ec9857c1d!2sHotel+ibis+M%C3%BCnchen+City+Ost!8m2!3d48.1294192!4d11.6270972!3m4!1s0x479e755f89d2cac7:0x439ebe4ec9857c1d!8m2!3d48.1294192!4d11.6270972">Google Maps</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  - Hotels around the Munich East Station (München Ostbahnhof): eg. Courtyard Munich City East or Motel One Munich City East (München City Ost): excellent public transport connections, located between the conference(~25min) and the hackathon location (~15min), 45min to the airport, 2 stations away from fpletz and globins office, we are also thinking about doing the social event on saturday evening somewhere in this area as there are a lot of nice bars and restaurants nearby
-  - a bit more low-cost and a bit away from Munich East is the
-  - Unterfoehring, where the conference takes place, is reachable via the line S8. The S8 also goes through the city center (Marienplatz, Main Station, Karlsplatz, etc ), any other hotel nearby those would also be fine, I think
-
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAglk6JlBoeA5hmWwdCBQ__rcZzbxvkB0"></script>
+<script>
+  google.maps.event.addDomListener(window, 'load', function(){
+    initialize('tng-map', 48.1861991, 11.6547822);
+    initialize('cafe-map', 48.144154, 11.562358);
+  });
+</script>
 
     <br />
   </div>
@@ -175,7 +206,6 @@
       </div>
   </footer>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 

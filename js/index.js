@@ -12,8 +12,8 @@ $( document ).ready(function(){
 
 
 // handle Google Maps stuff
-function initialize() {
-    var mapCanvas = document.getElementById('map');
+function initialize(mapId, lat, lng) {
+    var mapCanvas = document.getElementById(mapId);
     var mapOptions = {
         center: new google.maps.LatLng(48.19, 11.6472),
         zoom: 12,
@@ -38,9 +38,7 @@ function initialize() {
     ];
 
     var marker = new google.maps.Marker({
-        position: {lat: 48.1861991, lng: 11.6547822},
+        position: {lat: lat, lng: lng},
         map: map
     });
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);

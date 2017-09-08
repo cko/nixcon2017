@@ -47,118 +47,125 @@
   </nav>
 
 
-  <!--h1>participants</h1-->
+  <!--h1>hackathon</h1-->
   <div id="content">
     <br />
       <script type="text/javascript" src="js/handlebars-v4.0.10.js"></script>
+<div class="container">
+<div id="nixcon-logo">
+  <img src="./images/nixos-logo.png" class="responsive-img nixos-logo" width="300" style="margin-top: 2em; margin-bottom: 0em;" />
+</div>
+
+  <div class="row">
+    <div class="col s12 m12">
+      <h1 class="header center grey-text text-darken-2">NixCon Hackathon</h1>
+      <h3 class="header center grey-text text-darken-2">Part of the <a href="./">NixCon 2017</a></h3>
+    </div>
+  </div>
+  <br />
+</div>
 
 <div class="container">
   <div class="row">
     <div class="col s12 m12">
-      <h2 class="header center grey-text text-darken-2">Participants</h2>
-      <h4 class="header center grey-text text-darken-2">(who agreed to be on this site)</h4>
+      <h3 class="header center grey-text text-darken-2">Topics</h3>
     </div>
   </div>
-
+  <div class="row" id="topics">
+    <div class="col s12 m12">
+      <h4>We have not yet any proposed topic</h4>
+    </div>
+  </div>
   <div class="row">
-  <div class="col s12 m6">
-    <h5 class="header center grey-text text-darken-2" id="sum_conference"></h5>
-  </div>
-  <div class="col s12 m6">
-    <h5 class="header center grey-text text-darken-2" id="sum_hackathon"></h5>
-  </div>
-  </div>
-
-  <div id="participants" class="row">
-
+    <div class="col s12 m12">
+        <h4>Want to propose your own topic?</h4>
+        You can propose new topics via the following workflow:
+        <ol>
+            <li>fork the page repository <a href="https://github.com/cko/nixcon2017">cko/nixcon2017</a></li>
+            <li>add your topic to the file <tt>./hackathon-topics.json</tt>
+                <ul>
+                    <li>the skill level range goes from 1 (Beginner) to 3 (Expert)</li>
+                </ul>
+            </li>
+            <li>create a pull request</li>
+        </ol>
+    </div>
   </div>
 </div>
 
+<script id="topic-template" type="text/x-handlebars-template">
+  <div class="col s12 m6"><div class="card">
+    <p>{{host}}</p>
+    <h4>{{title}}</h4>
+    <b>Skill Level: {{skillLevel}} - {{skillLevelTo}}</b></br>
+    {{#if homepage}}
+    <a href="{{homepage}}">{{homepage}}</a>
+    {{/if}}
+    <p>{{description}}</p>
+  </div></div>
+</script>
 
-<script id="participant-template" type="text/x-handlebars-template">
-  <div class="col s12 m4 l3 xl2">
-    <div class="card medium">
-      <div class="card-image">
-        {{#if urls.photo}}
-           <img class="activator" src="{{urls.photo}}">
-        {{else}}
-           <img class="activator" src="/img/nophoto.png">
-        {{/if}}
-        {{#isOrga roles}}
-           <div class="ribbon ribbon-orga">Orga</div>
-        {{/isOrga}}
-        {{#isSpeaker roles}}
-           <div class="ribbon ribbon-speaker">Speaker</div>
-        {{/isSpeaker}}
-      </div>
-      <div class="card-content">
-        <span class="card-title activator">
-          {{name}}
-          <i class="material-icons right">more_vert</i>
-        </span>
-        {{#if company}}
-           <p>{{company}}</p>
-        {{/if}}
-      </div>
-      <div class="card-reveal">
-        <span class="card-title activator">{{name}}<i class="material-icons right">close</i></span>
-        {{#if about}}
-        <p>{{about}}</p>
-        {{/if}}
-      </div>
-      <div class="card-action">
-        {{#if urls.homepage}}
-        <a href="{{urls.homepage}}"><i class="fa fa-home fa-fw"/></a>
-        {{/if}}
-        {{#if urls.github}}
-        <a href="{{urls.github}}"><i class="fa fa-github fa-fw"/></a>
-        {{/if}}
-        {{#if urls.twitter}}
-        <a href="{{urls.twitter}}"><i class="fa fa-twitter fa-fw"/></a>
-        {{/if}}
-        </div>
-      </div>
-    </div>
+<script>
+ $( document ).ready(function() {
+    function skillLevelToHTML(lvl) {
+        switch(lvl) {
+            case 1: return "Beginner";
+            case 2: return "Advanced";
+            case 3: return "Expert";
+            default: return "?";
+        }
+    }
+
+    function skillLevelsToHTML(lvl1, lvl2) {
+        if (lvl1 === lvl2) {
+            return skillLevelToHTML(lvl1);
+        }
+        return skillLevelToHTML(lvl1) + " - " + skillLevelToHTML(lvl2)
+    }
+
+    $.getJSON( "./hackathon-topics.json", function( data ) {
+        function compare(a,b) {
+            if (a.title < b.title)
+                return -1;
+            if (a.title > b.title)
+                return 1;
+            return 0;
+        }
+        data.sort(compare);
+        data = data.filter(function(topic) {return topic.title != "Example Topic";});
+        if(data.length > 0){
+            var source = $("#topic-template").html();
+            var template = Handlebars.compile(source);
+            var items = [];
+            $.each( data, function(key, topic) {
+                items.push(template(topic));});
+            $("#topics").html(items.join(''));
+        }
+    });
+ });
+</script>
+
+
+<a name="location"></a>
+<div class="container">
+  <div class="row">
+  <h3 class="header center grey-text text-darken-2">Hackathon Location</h3>
   </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAglk6JlBoeA5hmWwdCBQ__rcZzbxvkB0"></script>
+<script>
+  google.maps.event.addDomListener(window, 'load', function(){initialize('cafe-map', 48.144154, 11.562358);});
 </script>
-
-<script type="text/javascript">
-window.onload = function() {
-  $.getJSON("https://registration.nixcon2017.org/static/participants.json", function(data) {
-    var items = [];
-    var sum_conference = 0;
-    var sum_hackathon = 0;
-    data.sort(function (a, b) {
-      return a.name.localeCompare(b.name);
-    });
-    var source = $("#participant-template").html();
-    var template = Handlebars.compile(source);
-    $.each(data, function(index, participant) {
-      var card = template(participant);
-      items.push(card);
-      if(participant.when.conference) sum_conference++;
-      if(participant.when.hackathon) sum_hackathon++;
-    });
-    $("#participants").append(items.join(""));
-    $("#sum_conference").append("Conference: " + sum_conference + " Participants");
-    $("#sum_hackathon").append("Hackathon: " + sum_hackathon + " Participants");
-  });
-  Handlebars.registerHelper("isSpeaker", function(myArray,options) {
-    if (myArray !== undefined && myArray.indexOf("speaker") > -1) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this);
-    }
-  });
-  Handlebars.registerHelper("isOrga", function(myArray,options) {
-    if (myArray !== undefined && myArray.indexOf("orga") > -1) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this);
-    }
-  });
-};
-</script>
+<div class="map_wrapper">
+  <div class="map" id="cafe-map"></div>
+  <div class="map_overlay">
+    <p class="lead">
+      <a href="http://cafe-netzwerk.de/" target="_blank">Café Netzwerk</a><br />
+      Luisenstraße 11<br />
+      80333 München
+    </p>
+  </div>
+</div>
+</div>
 
     <br />
   </div>
