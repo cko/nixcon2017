@@ -146,22 +146,20 @@ footer .row {
     margin-top: 0;
 }
 
-.card .speaker-image img {
-    width: auto;
-    max-height: 140px;
-}
-
-#participants .card-image {
-  width: auto;
-  max-height: 60%;
-}
-
 #hotels .card-content, #participants .card-content {
   padding: 12px;
 }
 
+#participants .card-image {
+  max-height: 55%;
+}
+
 #participants .card-action {
   padding: 12px;
+}
+
+#participants .card-title, #participants i {
+  font-size: 18px;
 }
 
 .ribbon{
@@ -173,12 +171,12 @@ footer .row {
   overflow:hidden;
   box-shadow:0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
   color:rgba(0,0,0,0.9);
-  height:30px;
+  height:20px;
   width:120px;
   top:-30px;
   padding-left:30px;
   padding-right:30px;
-  line-height:30px;
+  line-height:20px;
   letter-spacing: 0.5px;
 }
 
