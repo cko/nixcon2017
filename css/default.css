@@ -147,7 +147,7 @@ footer .row {
 }
 
 #hotels .card-content, #participants .card-content {
-  padding: 12px;
+  padding: 10px;
 }
 
 #participants .card-image {
@@ -155,11 +155,11 @@ footer .row {
 }
 
 #participants .card-action {
-  padding: 12px;
+  padding: 10px;
 }
 
-#participants .card-title, #participants i {
-  font-size: 18px;
+#participants .card-title, #participants i, #participants .card-action {
+  font-size: 16px;
 }
 
 .ribbon{
