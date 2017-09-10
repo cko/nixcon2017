@@ -99,13 +99,15 @@
 
 <script id="talk-template" type="text/x-handlebars-template">
   <li>
-    <div class="collapsible-header">
+    <div class="collapsible-header grey-text text-darken-2">
       <span class="time">
          {{#timeprint start duration }}
          {{/timeprint}}
       </span>
-      <span class="headline">
+      <span {{#neq title "Lunch Break" }}class="headline"{{/neq}}>
          {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
+     </span>
+     <span>
          {{#if persons}}
             by {{#each persons}}
                 {{ public_name }} {{#unless @last}} and {{/unless}}
@@ -134,6 +136,16 @@ window.onload = function() {
     var endTime = new Date (2017, 10, 28, startTime.getHours() + parseInt(duration[0]), startTime.getMinutes() + parseInt(duration[1]));
     var result = startString +  ' – ' + endTime.getHours() + ':' +  ("0" + (endTime.getMinutes())).slice(-2);
     return new Handlebars.SafeString(result);
+  });
+  Handlebars.registerHelper('neq', function(val1, val2, block) {
+    if (val1 != val2){
+      return block.fn(this);
+    }
+  });
+  Handlebars.registerHelper('eq', function(val1, val2, block) {
+    if (val1 == val2){
+      return block.fn(this);
+    }
   });
 }
 

@@ -118,6 +118,10 @@ footer .row {
   }
 }
 
+.collapsible-header {
+    font-weight: 500;
+}
+
 .collapsible-header .time {
     width: 8rem;
     line-height: 3rem;
