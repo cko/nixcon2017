@@ -134,8 +134,10 @@ window.onload = function() {
     var source = $("#participant-template").html();
     var template = Handlebars.compile(source);
     $.each(data, function(index, participant) {
-      var card = template(participant);
-      items.push(card);
+      if(participant.name) {
+        var card = template(participant);
+        items.push(card);
+      }
       if(participant.when.conference) sum_conference++;
       if(participant.when.hackathon) sum_hackathon++;
     });
