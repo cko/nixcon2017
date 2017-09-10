@@ -84,7 +84,7 @@
             <li>fork the page repository <a href="https://github.com/cko/nixcon2017">cko/nixcon2017</a></li>
             <li>add your topic to the file <tt>./hackathon-topics.json</tt>
                 <ul>
-                    <li>the skill level range goes from 1 (Beginner) to 3 (Expert)</li>
+                    <li>the fields <tt>homepage</tt> and <tt>required_experience</tt> are optional and default to <tt>null</tt></li>
                 </ul>
             </li>
             <li>create a pull request</li>
@@ -95,34 +95,20 @@
 
 <script id="topic-template" type="text/x-handlebars-template">
   <div class="col s12 m6"><div class="card">
-    <p>{{host}}</p>
+    <p><b>Host:</b> {{host}}</p>
     <h4>{{title}}</h4>
-    <b>Skill Level: {{skillLevel}} - {{skillLevelTo}}</b></br>
     {{#if homepage}}
     <a href="{{homepage}}">{{homepage}}</a>
     {{/if}}
-    <p>{{description}}</p>
+    <p><b>Description:</b> {{description}}</p>
+    {{#if required_experience}}
+    <p><b>Required Experience:</b><br\> {{required_experience}}</p>
+    {{/if}}
   </div></div>
 </script>
 
 <script>
  $( document ).ready(function() {
-    function skillLevelToHTML(lvl) {
-        switch(lvl) {
-            case 1: return "Beginner";
-            case 2: return "Advanced";
-            case 3: return "Expert";
-            default: return "?";
-        }
-    }
-
-    function skillLevelsToHTML(lvl1, lvl2) {
-        if (lvl1 === lvl2) {
-            return skillLevelToHTML(lvl1);
-        }
-        return skillLevelToHTML(lvl1) + " - " + skillLevelToHTML(lvl2)
-    }
-
     $.getJSON( "./hackathon-topics.json", function( data ) {
         function compare(a,b) {
             if (a.title < b.title)
@@ -132,7 +118,6 @@
             return 0;
         }
         data.sort(compare);
-        data = data.filter(function(topic) {return topic.title != "Example Topic";});
         if(data.length > 0){
             var source = $("#topic-template").html();
             var template = Handlebars.compile(source);

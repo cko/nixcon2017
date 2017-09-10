@@ -1,8 +1,9 @@
 [
     {
         "title": "Documentation Summit",
+        "homepage": null,
         "description": "Brainstorming ideas and active work session to improve the over-all official documentation for NixOS, Nix and Nixpkgs.",
         "host": "disassembler",
-        "required_experience": "Everyone no matter their experience level can help with contributing to our documentation efforts!"
+        "required_experience": "The experience level does not matter, everyone is welcome and can contribute to our documentation efforts!"
     }
 ]
