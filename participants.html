@@ -94,7 +94,9 @@
       <div class="card-content">
         <span class="card-title activator">
           {{name}}
-          <i class="material-icons right">more_vert</i>
+          {{#if about }}
+            <i class="material-icons right">more_vert</i>
+          {{/if}}
         </span>
         {{#if company}}
            <p>{{company}}</p>
@@ -142,8 +144,8 @@ window.onload = function() {
       if(participant.when.hackathon) sum_hackathon++;
     });
     $("#participants").append(items.join(""));
-    $("#sum_conference").append("Conference: " + sum_conference + " Participants");
-    $("#sum_hackathon").append("Hackathon: " + sum_hackathon + " Participants");
+    $("#sum_conference").append("Conference: " + sum_conference + " Participants (max. 90)");
+    $("#sum_hackathon").append("Hackathon: " + sum_hackathon + " Participants (max. 25)");
   });
   Handlebars.registerHelper("isSpeaker", function(myArray,options) {
     if (myArray !== undefined && myArray.indexOf("speaker") > -1) {
