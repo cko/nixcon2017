@@ -137,10 +137,6 @@ footer .row {
   padding: 24px 24px 0px 24px;
 }
 
-#topics .card {
-    padding: 20px;
-}
-
 #topics h4 {
     padding-top: 0;
     margin-top: 0;
@@ -156,7 +152,7 @@ footer .row {
   max-height: 60%;
 }
 
-#hotels .card-content, #participants .card-content {
+#hotels .card-content, #participants .card-content, #topics .card-content {
   padding: 12px;
 }
 

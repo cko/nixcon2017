@@ -178,7 +178,7 @@ var generate_talk_entries = function (talks, day_id){
       <h5>We have not yet any proposed topic</h5>
     </div>
   </div>
-  <div class="row">
+  <!--div class="row">
     <div class="col s12 m12">
         <h5>Want to propose your own topic?</h5>
         You can propose new topics via the following workflow:
@@ -192,13 +192,14 @@ var generate_talk_entries = function (talks, day_id){
             <li>create a pull request</li>
         </ol>
     </div>
-  </div>
+  </div-->
 </div>
-  
+
 <script id="topic-template" type="text/x-handlebars-template">
-  <div class="col s12 m6"><div class="card">
+  <div class="col s12 m6 l4"><div class="card small">
+    <div class="card-content grey-text text-darken-2">
+      <span class="card-title">{{title}}</span>
     <p><b>Host:</b> {{host}}</p>
-    <h4>{{title}}</h4>
     {{#if homepage}}
     <a href="{{homepage}}">{{homepage}}</a>
     {{/if}}
@@ -206,6 +207,7 @@ var generate_talk_entries = function (talks, day_id){
     {{#if required_experience}}
     <p><b>Required Experience:</b><br\> {{required_experience}}</p>
     {{/if}}
+  </div>
   </div></div>
 </script>
 
