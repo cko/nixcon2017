@@ -104,8 +104,12 @@
          {{#timeprint start duration }}
          {{/timeprint}}
       </span>
-      <span {{#neq title "Lunch Break" }}class="headline"{{/neq}}>
-         {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
+      <span {{#neq title "Lunch Break" }}
+               {{#neq title "Breakfast" }}
+                     class="headline"
+              {{/neq}}
+            {{/neq}}>
+            {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
      </span>
      <span>
          {{#if persons}}

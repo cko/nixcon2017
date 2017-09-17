@@ -146,15 +146,11 @@ footer .row {
     margin-top: 0;
 }
 
-#hotels .card-content, #participants .card-content {
-  padding: 10px;
-}
-
 #participants .card-image {
   max-height: 55%;
 }
 
-#participants .card-action {
+#hotels .card-content, #participants .card-content, #participants .card-action, #participants .card-reveal {
   padding: 10px;
 }
 
