@@ -93,7 +93,7 @@ window.onload = function() {
     });
     $("#participants").append(items.join(""));
     $("#sum_conference").append("Conference: " + sum_conference + " Participants (max. 90)");
-    $("#sum_hackathon").append("Hackathon: " + sum_hackathon + " Participants (max. 25)");
+    $("#sum_hackathon").append("Hackathon: " + sum_hackathon + " Participants (max. 32)");
   });
   Handlebars.registerHelper("isSpeaker", function(myArray,options) {
     if (myArray !== undefined && myArray.indexOf("speaker") > -1) {
