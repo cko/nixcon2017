@@ -103,15 +103,38 @@
             {{/neq}}>
             {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
      </span>
-     <span>
-         {{#if persons}}
+     {{#if persons}}
+         <span>
             by {{#each persons}}
                 {{ public_name }} {{#unless @last}} and {{/unless}}
             {{/each}}
-         {{/if}}
-      </span>
+          </span>
+     {{/if}}
     </div>
-    <div class="collapsible-body"><p>{{ abstract }}</p><p>{{ description }}</p></div>
+    <div class="collapsible-body">
+        <p>{{ abstract }}</p>
+        <p>{{ description }}</p>
+        {{#if links}}
+            <p>
+                Links:
+                <ul>
+                    {{#each links}}
+                        <li><a href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+             </p>
+        {{/if}}
+        {{#if attachments}}
+            <p>
+                Attachments:
+                <ul>
+                    {{#each attachments}}
+                        <li><a href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+             </p>
+        {{/if}}
+    </div>
   </li>
 </script>
 
