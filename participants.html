@@ -85,6 +85,10 @@ window.onload = function() {
     var template = Handlebars.compile(source);
     $.each(data, function(index, participant) {
       if(participant.name) {
+        if(participant.urls.photo == '/participants/images/nophoto.png') {
+          var ghid = participant.urls.github.split('/').reverse()[0];
+          participant.urls.photo = 'https://avatars.githubusercontent.com/' + ghid;
+        }
         var card = template(participant);
         items.push(card);
       }
