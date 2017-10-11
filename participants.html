@@ -84,11 +84,7 @@
   <div class="col s6 m3 l2 xl2">
     <div class="card small">
       <div class="card-image">
-        {{#if urls.photo}}
-           <img class="activator" src="{{urls.photo}}">
-        {{else}}
-           <img class="activator" src="/img/nophoto.png">
-        {{/if}}
+        <img class="activator" src="{{urls.photo}}">
         {{#isOrga roles}}
            <div class="ribbon ribbon-orga">Orga</div>
         {{/isOrga}}
@@ -142,6 +138,9 @@ window.onload = function() {
     var template = Handlebars.compile(source);
     $.each(data, function(index, participant) {
       if(participant.name) {
+        if ( participant.urls.photo == undefined || participant.urls.photo == "/participants/images/nophoto.png"){
+          participant.urls.photo = "https://avatars.githubusercontent.com/" + participant.urls.github.split("/")[3];
+        }
         var card = template(participant);
         items.push(card);
       }
