@@ -291,19 +291,20 @@ var generate_talk_entries = function (talks, day_id){
             </li>
             <li>create a pull request</li>
         </ol>
+        Or send and e-mail to orgateam@nixcon2017.org
     </div>
   </div>
 </div>
 
 <script id="topic-template" type="text/x-handlebars-template">
-  <div class="col s12 m6 l4"><div class="card small">
+  <div class="col s12 m6 l6"><div class="card medium">
     <div class="card-content grey-text text-darken-2">
       <span class="card-title">{{title}}</span>
     <p><b>Host:</b> {{host}}</p>
     {{#if homepage}}
     <a href="{{homepage}}">{{homepage}}</a>
     {{/if}}
-    <p><b>Description:</b> {{description}}</p>
+    <div><b>Description:</b> {{{description}}}</div>
     {{#if required_experience}}
     <p><b>Required Experience:</b><br\> {{required_experience}}</p>
     {{/if}}
