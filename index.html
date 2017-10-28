@@ -200,13 +200,14 @@
             {{/neq}}>
             {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
      </span>
-     <span>
+     <span>{{#if attachments}}(<i class="fa fa-paperclip"></i> Slides available){{/if}}
          {{#if persons}}
             by {{#each persons}}
                 {{ public_name }} {{#unless @last}} and {{/unless}}
             {{/each}}
          {{/if}}
       </span>
+
     </div>
     <div class="collapsible-body">
       <p>{{{ abstract }}}</p>
