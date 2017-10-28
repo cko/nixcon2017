@@ -19,5 +19,12 @@
         "description": "We do have pypi2nix, pip2nix and some good ideas about how to make the experience for Python developers better. I would like to update each other, put thoughts together, maybe tweak a few things around those.",
         "host": "johbo",
         "required_experience": "Prior usage of pypi2nix or pip2nix useful."
+    },
+    {
+        "title": "Teach Us Hydra",
+        "homepage": null,
+        "description": "Teach us hydra: We would like to learn how to set up hydra and build some simple overlay. We promise to create some sort of documentation in return!",
+        "host": "disassembler & gilligan",
+        "required_experience": "You should know hydra better than we do :)"
     }
 ]
