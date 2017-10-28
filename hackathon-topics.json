@@ -5,5 +5,20 @@
         "description": "Brainstorming ideas and active work session to improve the over-all official documentation for NixOS, Nix and Nixpkgs.",
         "host": "disassembler",
         "required_experience": "The experience level does not matter, everyone is welcome and can contribute to our documentation efforts!"
-    }
+    },
+    {
+        "title": "Has Nix a future? The future of Nix(Ops) in the age of containers, orchestrators and microservices",
+        "homepage": null,
+        "description": "<p>I'd like to trigger a discussion by stating a controversial idea and see where this leads us.</p>
+<p>The utility of Nix/nixpkgs as a development tool is still unparalleled.
+However, the industry is moving towards containers and orchestrators, and I argue that
+NixOS and NixOps are becoming less relevant now that the industry is moving to this new model.
+</p><p>
+These changes might actually pose an existential threat to Nix, given that (container) build
+systems might get \"good enough\".
+Alternatives that operate in the same area are Bazel by Google, Habitat by Chef, the new BuildKit by Docker.
+</p><p>
+My question to you is: how could we leverage this move to containers/orchestrators, and archieve World Domination?</p>",
+        "host": "Maarten"
+      }
 ]
