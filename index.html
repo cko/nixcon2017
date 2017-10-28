@@ -208,7 +208,11 @@
          {{/if}}
       </span>
     </div>
-    <div class="collapsible-body"><p>{{{ abstract }}}</p><p>{{{ description }}}</p></div>
+    <div class="collapsible-body">
+      <p>{{{ abstract }}}</p>
+      <p>{{{ description }}}</p>
+      <p>{{#each attachments}}<a href="https://schedule.nixcon2017.org/{{ this.url }}">{{ this.title }}</a><br/> {{/each}}</p>
+    </div>
   </li>
 </script>
 
