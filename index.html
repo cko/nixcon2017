@@ -254,7 +254,7 @@ var generate_talk_entries = function (talks, day_id){
   talks.forEach(function(talk, index){
     var source = $("#talk-template").html();
     var template = Handlebars.compile(source);
-    var slidelinks = talk.links.filter( link => link.title.indexOf('Slides') !== -1);
+    var slidelinks = talk.links.filter( function (link){return link.title.indexOf('Slides') !== -1});
     if (talk.attachments.length > 0 || slidelinks.length > 0){ talk["slides"] = true; }
     var entry = template(talk);
     items.push(entry);
