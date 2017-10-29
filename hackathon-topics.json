@@ -10,7 +10,7 @@
         "title": "Has Nix a future? The future of Nix(Ops) in the age of containers, orchestrators and microservices",
         "homepage": null,
         "description": "<p>I'd like to trigger a discussion by stating a controversial idea and see where this leads us.</p><p>The utility of Nix/nixpkgs as a development tool is still unparalleled. However, the industry is moving towards containers and orchestrators, and I argue that NixOS and NixOps are becoming less relevant now that the industry is moving to this new model.</p><p>These changes might actually pose an existential threat to Nix, given that (container) build systems might get \"good enough\". Alternatives that operate in the same area are Bazel by Google, Habitat by Chef, the new BuildKit by Docker.</p><p>My question to you is: how could we leverage this move to containers/orchestrators, and archieve World Domination?</p>",
-        "host": "Maarten",
+        "host": "moretea",
         "required_experience": null
     },
     {
@@ -19,5 +19,12 @@
         "description": "We do have pypi2nix, pip2nix and some good ideas about how to make the experience for Python developers better. I would like to update each other, put thoughts together, maybe tweak a few things around those.",
         "host": "johbo",
         "required_experience": "Prior usage of pypi2nix or pip2nix useful."
+    },
+    {
+        "title": "Teach Us Hydra",
+        "homepage": null,
+        "description": "Teach us hydra: We would like to learn how to set up hydra and build some simple overlay. We promise to create some sort of documentation in return!",
+        "host": "disassembler & gilligan",
+        "required_experience": "You should know hydra better than we do :)"
     }
 ]
