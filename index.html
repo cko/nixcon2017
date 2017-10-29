@@ -200,13 +200,14 @@
             {{/neq}}>
             {{ title }} {{#if subtitle}} – {{ subtitle }} {{/if}}
      </span>
-     <span>{{#if attachments}}(<i class="fa fa-paperclip"></i> Slides available){{/if}}
+     <span>
          {{#if persons}}
             by {{#each persons}}
                 {{ public_name }} {{#unless @last}} and {{/unless}}
             {{/each}}
          {{/if}}
       </span>
+      <span>{{#if slides}}<i class="fa fa-paperclip"></i>{{/if}}</span>
 
     </div>
     <div class="collapsible-body">
@@ -253,6 +254,8 @@ var generate_talk_entries = function (talks, day_id){
   talks.forEach(function(talk, index){
     var source = $("#talk-template").html();
     var template = Handlebars.compile(source);
+    var slidelinks = talk.links.filter( link => link.title.indexOf('Slides') !== -1);
+    if (talk.attachments.length > 0 || slidelinks.length > 0){ talk["slides"] = true; }
     var entry = template(talk);
     items.push(entry);
   });
