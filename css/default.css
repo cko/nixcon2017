@@ -135,6 +135,10 @@ footer .row {
     margin-right: 1rem;
 }
 
+.collapsible-header i {
+  float: right;
+}
+
 .nixos-sponsor .card .card-image img {
   width: auto;
   max-height: 100px;
