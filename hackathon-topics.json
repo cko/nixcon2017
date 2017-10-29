@@ -26,5 +26,12 @@
         "description": "Teach us hydra: We would like to learn how to set up hydra and build some simple overlay. We promise to create some sort of documentation in return!",
         "host": "disassembler & gilligan",
         "required_experience": "You should know hydra better than we do :)"
+    },
+    {
+        "title": "Board please? :-)",
+        "homepage": null,
+        "description": "There are a lot of discussions on whether or not to install more rules and procedures for NixOS and which those should be. I believe that before we can even have this discussion we need what most other projects of comparable size have: some sort of steering committee. One potentially non-controversial way to determine initial members of this board would be to nominate all prior release managers",
+        "host": "gilligan",
+        "required_experience": null
     }
 ]
