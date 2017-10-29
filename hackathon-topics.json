@@ -33,5 +33,12 @@
         "description": "There are a lot of discussions on whether or not to install more rules and procedures for NixOS and which those should be. I believe that before we can even have this discussion we need what most other projects of comparable size have: some sort of steering committee. One potentially non-controversial way to determine initial members of this board would be to nominate all prior release managers",
         "host": "gilligan",
         "required_experience": null
+    },
+    {
+        "title": "Typing Nix",
+        "homepage": null,
+        "description": "The typing-nix project ended up with a nice theoretical system. This now needs to be refined and implemented in order to be a real thing, for which I will need the hep of the community.",
+        "host": "regnat",
+        "required_experience": "Some haskell is most probably needed for the implementation itself, but everyone is welcome to submit ideas and discuss the design"
     }
 ]
