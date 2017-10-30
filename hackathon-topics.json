@@ -40,5 +40,19 @@
         "description": "The typing-nix project ended up with a nice theoretical system. This now needs to be refined and implemented in order to be a real thing, for which I will need the hep of the community.",
         "host": "regnat",
         "required_experience": "Some haskell is most probably needed for the implementation itself, but everyone is welcome to submit ideas and discuss the design"
+    },
+    {
+        "title": "Test ALL the things",
+        "homepage": null,
+        "description": "<p>I will work on the package tests I introduced in <a href=\"https://www.youtube.com/watch?v=6bLF7zqB7EM\">my talk</a>.</p><p>If you want to help, have questions or want to know how to write tests for your package, please join me!</p>",
+        "host": "Profpatsch",
+        "required_experience": null
+    },
+    {
+        "title": "taggedUnion type for the module system",
+        "homepage": null,
+        "description": "<p>Tagged unions, also called sum types, can represent different values which have a nested type themselves. A practical example where this is useful is <code>hdparm -a</code>, which represents different semantic values with ranges in one byte. In nixos we could represent that with <code>type = taggedUnion { off = unit; low = int.between 1 127; high = int.between 128 254; };</code>.</p><p>I am having a bit of trouble with how to define the merge function, so please shout if you know the insides of the module system.</p>",
+        "host": "Profpatsch",
+        "required_experience": "a bit of nix to help OR the module system to help a lot"
     }
 ]
