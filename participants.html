@@ -10,10 +10,14 @@
 
   <div class="row">
   <div class="col s12 m6">
-    <h5 class="header center grey-text text-darken-2" id="sum_conference"/>
+    <a href="?conference">
+      <h5 class="header center" id="sum_conference"/>
+    </a>
   </div>
   <div class="col s12 m6">
-    <h5 class="header center grey-text text-darken-2" id="sum_hackathon"/>
+    <a href="?hackathon">
+      <h5 class="header center" id="sum_hackathon"/>
+    </a>
   </div>
   </div>
 
@@ -70,6 +74,18 @@
 
 <script type="text/javascript">
 window.onload = function() {
+  var href = location.href;
+  var filter = function() {return true;};
+  if (href.indexOf("?") !== -1){
+    filterRaw = href.substring(href.indexOf("?")+1);
+    if (filterRaw == "conference"){
+      filter = function(participant) { return participant.when.conference; };
+    }
+    if (filterRaw == "hackathon"){
+      filter = function(participant) { return participant.when.hackathon; };
+    }
+  }
+
   $.getJSON("https://registration.nixcon2017.org/static/participants.json", function(data) {
     var items = [];
     var sum_conference = 0;
@@ -79,8 +95,10 @@ window.onload = function() {
     });
     var source = $("#participant-template").html();
     var template = Handlebars.compile(source);
+
+
     $.each(data, function(index, participant) {
-      if(participant.name) {
+      if(participant.name && filter(participant)) {
         if ( participant.urls.photo == undefined || participant.urls.photo == "/participants/images/nophoto.png"){
           participant.urls.photo = "https://avatars.githubusercontent.com/" + participant.urls.github.split("/")[3];
         }
