@@ -177,6 +177,7 @@
             {{/each}}
          {{/if}}
       </span>
+      <span>{{#if video}}<i class="fa fa-youtube"></i>{{/if}}</span>
       <span>{{#if slides}}<i class="fa fa-paperclip"></i>{{/if}}</span>
 
     </div>
@@ -225,7 +226,9 @@ var generate_talk_entries = function (talks, day_id){
     var source = $("#talk-template").html();
     var template = Handlebars.compile(source);
     var slidelinks = talk.links.filter( function (link){return link.title.indexOf('Slides') !== -1});
+    var videolink = talk.links.filter( function (link){return link.title.indexOf('Video') !== -1});
     if (talk.attachments.length > 0 || slidelinks.length > 0){ talk["slides"] = true; }
+    if (videolink.length > 0){ talk["video"] = true; }
     var entry = template(talk);
     items.push(entry);
   });
