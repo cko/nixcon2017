@@ -1,0 +1,82 @@
+.cell-height1 { height: 40px; }
+.cell-height2 { height: 77px; }
+.cell-height3 { height: 117px; }
+.cell-height4 { height: 157px; }
+.cell-height5 { height: 197px; }
+.cell-height6 { height: 237px; }
+.cell-height7 { height: 277px; }
+.cell-height8 { height: 317px; }
+.cell-height9 { height: 357px; }
+.cell-height10 { height: 397px; }
+.cell-height11 { height: 437px; }
+.cell-height12 { height: 477px; }
+.cell-height13 { height: 517px; }
+.cell-height14 { height: 557px; }
+.cell-height15 { height: 597px; }
+.cell-height16 { height: 637px; }
+.cell-height17 { height: 677px; }
+.cell-height18 { height: 717px; }
+.cell-height19 { height: 757px; }
+.cell-height20 { height: 797px; }
+.cell-height21 { height: 837px; }
+.cell-height22 { height: 877px; }
+.cell-height23 { height: 917px; }
+.cell-height24 { height: 957px; }
+
+
+.event.track-default {
+  background-color: #555;
+  border-color: #555;
+}
+
+.event.track-default div.event-header {
+  background-color: #555;
+}
+
+.event.track-default div.event-header a {
+  color: #fff;
+}
+
+.conference-background {
+  background-color: #555;
+}
+
+
+.event.track-track {
+  background-color: #fefd7f;
+  border-color: #fefd7f;
+}
+.event.track-track div.event-header {
+  background-color: #fefd7f;
+}
+
+.event.track-track div.event-header a {
+  color: #000;
+}
+
+#colorkeys .track-track {
+  background-color: #fefd7f;
+}
+
+#colorkeys {
+  font-size: .8em;
+  opacity: .85;
+}
+
+#colorkeys ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#colorkeys ul li {
+  margin: 0 .2em;
+  float: right;
+}
+
+#colorkeys ul li div {
+  padding: 0;
+}
+
+/* Custom Conference CSS */
+

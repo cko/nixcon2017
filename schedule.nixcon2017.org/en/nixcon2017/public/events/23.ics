@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20171029T030000
+RDATE:20171029T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T114500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T110000
+DTSTAMP;VALUE=DATE-TIME:20170828T141440Z
+UID:a9b99ef2-d1e9-4227-95ba-2cf2a9928c20@schedule.nixcon2017.org
+DESCRIPTION:For the past couple of years\, Darwin has been a first-class 
+ "pure" platform on Nix. In this talk I'll describe the many hurdles we'v
+ e had to overcome to get from an impure poorly supported platform to whe
+ re we are today. I'll also cover ongoing pain points and where we see th
+ e platform going\, and why I think it should take over the Mac packaging
+  ecosystem.\n
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/23
+SUMMARY:Nix on Darwin
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

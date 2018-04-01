@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20171029T030000
+RDATE:20171029T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T173000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T170000
+DTSTAMP;VALUE=DATE-TIME:20171029T130542Z
+UID:828f3e09-0539-489b-bdc8-6ef83c10969c@schedule.nixcon2017.org
+DESCRIPTION:LumiGuide develops and maintains bicycle and car parking guid
+ ance systems that are deployed in various cities in the Netherlands and 
+ abroad. To run this system a number of different machines are needed: im
+ age analysis servers deployed locally in facilities\, central web-server
+ s and support servers in data centers\, embedded machines like Raspberry
+  Pi's and ARM FPGA's to power our various displays in facilities and on 
+ the streets. Finally our engineers have workstation to write our softwar
+ e. \n\nAll these machines need to be developed\, tested\, provisioned\, 
+ configured\, installed and rolled back (in case we make a mistake). Sinc
+ e we don't have a dedicated sys-admin we rely on automation to do most o
+ f these tasks. We use the Nix ecosystem of tools to help us with that.\n
+ \nI will talk about how we've structured our mono-repository\, how we ma
+ ke sure each engineer uses the exact same version of nixpkgs and the exa
+ ct same NixOS configuration\, how we override our Haskell packages\, how
+  we use Continuous Integration wit hydra and how we deploy our machines 
+ using nixops.\n\nFinally I will also talk about the things that we don't
+  like about the Nix ecosystem.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/22
+SUMMARY:Nix at LumiGuide
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

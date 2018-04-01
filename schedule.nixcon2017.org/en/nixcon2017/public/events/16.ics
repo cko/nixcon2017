@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T150000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T141500
+DTSTAMP;VALUE=DATE-TIME:20171031T104637Z
+UID:2fe0dfad-6977-4f75-9485-05d99c2191ce@schedule.nixcon2017.org
+DESCRIPTION:While there is pretty good support for testing NixOS based se
+ rvices inside VMs\, the same doesn’t hold for large parts of nixpkgs\, e
+ specially for testing packages. I will present different approaches to i
+ mprove testing.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/16
+SUMMARY:Test ALL the Things
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

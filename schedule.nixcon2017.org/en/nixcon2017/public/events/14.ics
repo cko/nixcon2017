@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T161500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T160000
+DTSTAMP;VALUE=DATE-TIME:20170828T135627Z
+UID:81a3783a-d283-49ce-a703-fadb89fe3fd1@schedule.nixcon2017.org
+DESCRIPTION:Nix User Profile (NixUP) should have been a declarative confi
+ guration for the user environment [1]. By now similar solutions have eme
+ rged\, like nix-home [2] or home-manager [3]. In this talk the different
+  approaches will be reviewed and an update on the state and future of Ni
+ xUP will be given.\n\n[1] https://github.com/NixOS/nixpkgs/pull/9250\n[2
+ ] https://github.com/sheenobu/nix-home\n[3] https://github.com/rycee/hom
+ e-manager
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/14
+SUMMARY:NixUP
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

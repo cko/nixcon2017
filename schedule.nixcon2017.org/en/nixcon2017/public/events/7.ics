@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T121500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T113000
+DTSTAMP;VALUE=DATE-TIME:20170905T053538Z
+UID:cada1f41-2fee-4dea-a2ba-9239244fe84b@schedule.nixcon2017.org
+DESCRIPTION:NixOS offers plenty of advanced technical features that make 
+ everyone's eyes shine with happiness: declarative system configuration\,
+  atomic upgrades\, rollbacks\, reproducible system configurations\, mult
+ i-user package management\, and so on and so forth. Basically\, we rock!
+  Many professional Linux users would love to have those capabilities ava
+ ilable on their machines. Yet\, professional users cannot make do withou
+ t some rather basic features that NixOS lacks\, like\, offering speciali
+ zed code paths for desktop users and server installations\, binding cust
+ omer service-level agreements\, long-term support releases with regular 
+ maintenance updates for 3 years of longer\, and -- last\, but not least 
+ -- fast and reliable security updates. The purpose of this talk is to ou
+ tline ways how we\, as a community\, might be able to improve upon that 
+ situation.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/7
+SUMMARY:Quo vadis\, NixOS?
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR
