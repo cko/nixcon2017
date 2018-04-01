@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=utf-8' http-equiv='content-type'>
+<title>Schedule NixCon 2017</title>
+<link rel="stylesheet" media="screen" href="../../../../assets/public_schedule-fe5c2995f8fa4b0f51bd82df5c41e84e7e7c12485fe767c4a3cf56ad83b2844e.css" />
+<link rel="stylesheet" media="all" href="../schedule/style.css" />
+<link rel="stylesheet" media="print" href="../../../../assets/public_schedule_print-99d3251f43ed74e6a77a8013f74ce1ee07c4de819a619a15d8b8bb5dc9d4dad1.css" />
+</head>
+<body>
+<div id='wrapper'>
+<div id='banner'></div>
+<div id='header'>
+<h1>Schedule NixCon 2017</h1>
+</div>
+<div id='navigation'>
+<ul>
+<li>
+<a href="../schedule.1.html">Overview</a>
+</li>
+<li>
+<a href='../schedule/1.html'>
+Saturday
+ - 
+<span class='small-font'>2017-10-28</span>
+</a>
+</li>
+<li>
+<a href='../schedule/2.html'>
+Sunday
+ - 
+<span class='small-font'>2017-10-29</span>
+</a>
+</li>
+<li>
+<a href="../speakers.html">Speakers</a>
+</li>
+<li class='selected'>
+<a href="../events.html">Events</a>
+</li>
+<li>
+<a href="../qrcode.html">QR-Code</a>
+</li>
+</ul>
+
+</div>
+<div id='main-content'>
+<h2>lecture: Test ALL the Things</h2>
+<h3 class='title'>On improving the nixpkgs testing story</h3>
+<div class='column left' id='basic'>
+<div class="image large"><img src="../../../../assets/event_large-4b8aa978adbb7c8e80151f5a83c6782a12e763374ae3a042a55e7e626a64d93b.png" alt="Event large" /></div>
+<p class="abstract">While there is pretty good support for testing NixOS based services inside VMs, the same doesn’t hold for large parts of nixpkgs, especially for testing packages. I will present different approaches to improve testing.</p>
+<p class="description"><p>Over the last year I have been creating various testing environments, tried out different approaches and created tests for various parts of nixpkgs, notably package tests with very interesting properties.</p></p>
+
+<p class="description"><p>There are two kinds of tests in nixpkgs right now:
+<br /></p><ol>
+<br /><li>
+<br /><code>/lib/tests</code>: this is essentially a derivation that tests (some/most) library functions by checking their outputs.</li>
+<br /><li>
+<br /><code>/nixos/tests</code>: contains a list of tests for modules that use the VM testing infrastructure (`/nixos/tests/make-test.nix`).</li>
+<br /></ol></p>
+
+<p class="description"><p>Both kinds of tests live in a different part of the codebase than the implementations they test, and have to be run separately, and manually (by hand or by CI). This leads to easy desynchronization of test- and actual implementation—the tests bit-rot over time.</p><p></p>
+
+<p class="description"></p><p>I therefore propose two maxims:
+<br /></p><ol>
+<br /><li>All testing code should be as close to the implementation code as possible.</li>
+<br /><li>Changing the implementation should not be possible without adjusting the testing code to make it pass.</li>
+<br /></ol></p>
+
+<p class="description"><p>Coming from this angle, I recognized that a unique property of nix evaluation—short runtime—makes it possible to let nix packages depend on their tests. This is accomplished by a `seq` for derivations, discovered with @aszlig.</p></p>
+
+<p class="description"><p>I will present how <code>drvSeq</code> makes it possible to create package tests that are able to use the full power of the nix language for abstraction. It also does not cause unnecessary recompilation, like changing the <code>checkPhase</code> does right now.<br>
+<br />Going further, I will discuss best practices for including these tests into already existing packages.</p></p>
+
+<p class="description"><p>As well as packages, functions (and thereby whole language frameworks) can be tested as well, enabling a kind of testing that is automatically done to every usage of the function (i.e. every package in the framework). This could lead to interesting use cases.</p></p>
+
+<p class="description"><p>While VM tests already work with automatic CI support, their code location is not satisfying according to maxim 1. I will propose an integrations of VM tests as a module option, producing outputs neatly piecing into the current hydra setup.</p></p>
+</div>
+<div class='column left' id='details'>
+<h3>Info</h3>
+<p>
+<b>Day:</b>
+<a href="../schedule/1.html">2017-10-28</a>
+<br>
+<b>Start time:</b>
+14:15
+<br>
+<b>Duration:</b>
+00:45
+<br>
+<b>Room:</b>
+Unterwelt
+<br>
+<br>
+</p>
+<h3>Links:</h3>
+<ul>
+<li><a href="16.ics">iCalendar</a></li>
+<li><a href="http://profpatsch.de/talks/nix/nixpkgs-tests">Slides</a></li>
+<li><a href="https://www.youtube.com/watch?v=5Z7IckV6gao&amp;index=14&amp;list=PLgknCdxP89ReQzhfKwMYjLdwWsc7us8ns">Video</a></li>
+</ul>
+<div class='column left' id='concurrent_events'>
+<h3><span class="translation_missing" title="translation missing: en.public.schedule.event.concurrent_events">Concurrent Events</span></h3>
+<dl class='dl-horizontal'>
+</dl>
+</div>
+</div>
+<div class='column right' id='sidebar'>
+<h3>Speakers</h3>
+<table class='list'>
+<tbody>
+<tr>
+<td><div class="image small"><img src="../../../../assets/person_small-6becbdd9bedc5ac3962dfb66f90e5ebb8fdbb97c287002e97bba3762a122a2bf.png" alt="Person small" /></div></td>
+<td><a href="../speakers/22.html">Profpatsch</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='span16'>
+</div>
+
+<br class='clear'>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20171029T030000
+RDATE:20171029T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T163000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T160000
+DTSTAMP;VALUE=DATE-TIME:20171029T130702Z
+UID:6d42bc16-57ae-4f50-af79-35ffe0421e8a@schedule.nixcon2017.org
+DESCRIPTION:Infrastructure automation testing is hard\, but NixOS makes i
+ t a breeze. Using NixOS' testing framework\, Tumblr developed a comprehe
+ nsive integration test suite for Jetpants\, Tumblr's database automation
+  toolkit designed to manage billions of rows and hundreds of database ma
+ chines.\n\nIn this talk we will explore the challenges of testing Jetpan
+ ts\, mimicking complex replication and sharding topologies\, and future 
+ applications of NixOS at Tumblr.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/20
+SUMMARY:NixOS at Tumblr
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

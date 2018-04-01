@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T130000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T121500
+DTSTAMP;VALUE=DATE-TIME:20170905T053907Z
+UID:dbb7a020-7130-40ee-aba2-77840b7b76ee@schedule.nixcon2017.org
+DESCRIPTION:NixOS is receiving more and more attention from users expecti
+ ng up to date packages and timely security patches. Weekly "catch-up" is
+ sues were effective\, but faltered after our datasource dried up.\n\nIn 
+ this talk we will explore the challenges and potential solutions around 
+ regular NixOS security patching\, and how to join the famous "-distro" l
+ ist.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/21
+SUMMARY:NixOS Security
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

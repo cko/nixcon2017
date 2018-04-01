@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T111500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T104500
+DTSTAMP;VALUE=DATE-TIME:20170905T053306Z
+UID:4b038406-a272-492c-ad1e-526ce83d2777@schedule.nixcon2017.org
+DESCRIPTION:As the latest release managers\, we will describe how NixOS r
+ eleases have been done in the past and how we want to encourage the Nix 
+ community to participate in the release process. We are going to highlig
+ ht some interesting new features of past releases and the then brand-new
+  17.09 'Hummingbird' release. Finally\, we present you some ideas for fe
+ atures we would love to see implemented.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/19
+SUMMARY:Releasing NixOS
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

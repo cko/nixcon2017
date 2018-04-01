@@ -1,0 +1,405 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:20171029T030000
+RDATE:20171029T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T173000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T164500
+DTSTAMP;VALUE=DATE-TIME:20170917T211620Z
+UID:464c1562-36e7-46b6-aba3-7c5366e9b7c2@schedule.nixcon2017.org
+DESCRIPTION:We present here the new <em>tix</em> tool\, a type-checker fo
+ r the Nix language whose goal is to make nix code easier to write and ma
+ intain.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/8
+SUMMARY:A type-system for Nix - Théophane Hufschmitt
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T113000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T111500
+DTSTAMP;VALUE=DATE-TIME:20171027T205625Z
+UID:057b18e3-e1f5-49d0-956b-1a66c447de84@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/35
+SUMMARY:Break - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T160000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T154500
+DTSTAMP;VALUE=DATE-TIME:20171027T210505Z
+UID:69d56eef-4d75-4dad-9010-ded9ecd9b039@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/36
+SUMMARY:Break - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T120000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T114500
+DTSTAMP;VALUE=DATE-TIME:20171027T214249Z
+UID:59a44a2b-e000-4751-a83f-ede8204c358c@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/37
+SUMMARY:Break - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T160000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T154500
+DTSTAMP;VALUE=DATE-TIME:20171029T130803Z
+UID:16a8901a-069b-4f0a-96a1-2f667603876e@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/38
+SUMMARY:Break - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T103000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T093000
+DTSTAMP;VALUE=DATE-TIME:20170917T073819Z
+UID:f08e18cf-556d-4b8c-a517-12532d0fe190@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/32
+SUMMARY:Breakfast - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T103000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T093000
+DTSTAMP;VALUE=DATE-TIME:20170917T073858Z
+UID:999dacc7-90e0-4c01-9200-ae57c996751c@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/33
+SUMMARY:Breakfast - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T174500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T173000
+DTSTAMP;VALUE=DATE-TIME:20171029T130443Z
+UID:65813142-5652-4123-9c0b-ffda8dbba4ee@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/29
+SUMMARY:Closing - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T124500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T120000
+DTSTAMP;VALUE=DATE-TIME:20171027T131147Z
+UID:20ab8ceb-80d4-41e7-abca-1e139abb39cb@schedule.nixcon2017.org
+DESCRIPTION:<ul>\n<li>Current state on Nix install on Linux.</li>\n<li>Wh
+ at Linux users and professionals in Nix* world experience first. And wha
+ t first impression they get.</li>\n<li>Demonstration of more polished in
+ stallation process that submitted upstream.</li>\n<li>Picture of competi
+ tive technologies for today. Snap\, Docker\, Kubernetes\, Ansible\, Terr
+ aform. Thay solve the same problems but in more clunkier way\, we need t
+ o hurry up before last puzzle peace - Snap\, goes into place (becomes st
+ able enough for business) in 8-9 month.</li>\n<li>Description of why Sna
+ p is a clever lockdown.</li>\n<li>We should get Linux community and mark
+ etshare before Snap takes everything. Lets invade enthusiasts and busine
+ ss with Nix and NixPkgs solution.</li>\n<li>Importance of integration in
+  Linux tech world and community. And what Linux going to get\, what buss
+ iness would get. And what the whole Nix* ecosystem would greatly benefit
+  from.</li>\n<li>Call to help merge\, to collaborate\, to take ideas\, c
+ ode. Because author cares only to spread Nix in Linux more\, before Snap
+  would seize the whole market and technologies that are widely used - be
+ come complette stack and become "good enough" without any involvement of
+  Nix* in the market.</li>\n</ul>
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/34
+SUMMARY:Impact of Nix installation quality on Linux - Anton Latukha
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T151500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T143000
+DTSTAMP;VALUE=DATE-TIME:20171029T130320Z
+UID:7c0bc07c-5977-4254-9a3f-72d5c95d1169@schedule.nixcon2017.org
+DESCRIPTION:The current CI infrastructure around nixpkgs has difficulties
+  to build the whole package set in due time. While there were attempts t
+ o build every pull requests\, these are not enabled by default because i
+ t requires even more resources. We will explore how to optimize even mor
+ e the build process to meet the size of nixpkgs.\n\nWe will survey with 
+ state-of-the-art build systems like scons\, bazel and tup to see how we 
+ could improve incremental builds in nix. Based on nix-make\, we will des
+ cribe how nix could cooperate with the build tool of a given package to 
+ bring incremental builds at a finer granularity. In particular\, we will
+  explore how the intensional store model (as used by bazel for example) 
+ could help avoiding some mass rebuilds.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/18
+SUMMARY:Incremental package builds - Guillaume Maudoux (layus)
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T130000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T124500
+DTSTAMP;VALUE=DATE-TIME:20171107T231750Z
+UID:34e22c69-11ac-4e11-9438-98e596ce9969@schedule.nixcon2017.org
+DESCRIPTION:\n<b>Vulnix by Christian Kauhaus</b>
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/25
+SUMMARY:Lightning Talks - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T141500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T130000
+DTSTAMP;VALUE=DATE-TIME:20170905T203314Z
+UID:bc761c4e-f2c0-4f0f-bdb2-dda5e71ad195@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/30
+SUMMARY:Lunch Break - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T141500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T130000
+DTSTAMP;VALUE=DATE-TIME:20170905T203212Z
+UID:5083b8c8-3fba-403b-9776-6ad291fb3a40@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/31
+SUMMARY:Lunch Break - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T110000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T103000
+DTSTAMP;VALUE=DATE-TIME:20170828T141637Z
+UID:2889734e-c85c-4dfa-a0fa-0994e35496fb@schedule.nixcon2017.org
+DESCRIPTION:This talk wants to give an overview over the usage and develo
+ pment of pypi2nix\, a tool to generate and maintain python environments 
+ with nix.\n
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/10
+SUMMARY:Managing Python Environments with pypi2nix - Sebastian Jordan
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T164500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T161500
+DTSTAMP;VALUE=DATE-TIME:20170828T135522Z
+UID:4d8622da-917c-4171-986a-8f1f5cca3b78@schedule.nixcon2017.org
+DESCRIPTION:In this talk I will give an overview of the new features in N
+ ix 1.12\, and the ongoing work on the "nix" command intended to replace 
+ the existing command-line interface.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/27
+SUMMARY:Nix 1.12 - Eelco Dolstra
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T173000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T170000
+DTSTAMP;VALUE=DATE-TIME:20171029T130542Z
+UID:828f3e09-0539-489b-bdc8-6ef83c10969c@schedule.nixcon2017.org
+DESCRIPTION:LumiGuide develops and maintains bicycle and car parking guid
+ ance systems that are deployed in various cities in the Netherlands and 
+ abroad. To run this system a number of different machines are needed: im
+ age analysis servers deployed locally in facilities\, central web-server
+ s and support servers in data centers\, embedded machines like Raspberry
+  Pi's and ARM FPGA's to power our various displays in facilities and on 
+ the streets. Finally our engineers have workstation to write our softwar
+ e. \n\nAll these machines need to be developed\, tested\, provisioned\, 
+ configured\, installed and rolled back (in case we make a mistake). Sinc
+ e we don't have a dedicated sys-admin we rely on automation to do most o
+ f these tasks. We use the Nix ecosystem of tools to help us with that.\n
+ \nI will talk about how we've structured our mono-repository\, how we ma
+ ke sure each engineer uses the exact same version of nixpkgs and the exa
+ ct same NixOS configuration\, how we override our Haskell packages\, how
+  we use Continuous Integration wit hydra and how we deploy our machines 
+ using nixops.\n\nFinally I will also talk about the things that we don't
+  like about the Nix ecosystem.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/22
+SUMMARY:Nix at LumiGuide - Bas van Dijk
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T114500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T110000
+DTSTAMP;VALUE=DATE-TIME:20170828T141440Z
+UID:a9b99ef2-d1e9-4227-95ba-2cf2a9928c20@schedule.nixcon2017.org
+DESCRIPTION:For the past couple of years\, Darwin has been a first-class 
+ "pure" platform on Nix. In this talk I'll describe the many hurdles we'v
+ e had to overcome to get from an impure poorly supported platform to whe
+ re we are today. I'll also cover ongoing pain points and where we see th
+ e platform going\, and why I think it should take over the Mac packaging
+  ecosystem.\n
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/23
+SUMMARY:Nix on Darwin - Dan Peebles
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T130000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T121500
+DTSTAMP;VALUE=DATE-TIME:20170905T053907Z
+UID:dbb7a020-7130-40ee-aba2-77840b7b76ee@schedule.nixcon2017.org
+DESCRIPTION:NixOS is receiving more and more attention from users expecti
+ ng up to date packages and timely security patches. Weekly "catch-up" is
+ sues were effective\, but faltered after our datasource dried up.\n\nIn 
+ this talk we will explore the challenges and potential solutions around 
+ regular NixOS security patching\, and how to join the famous "-distro" l
+ ist.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/21
+SUMMARY:NixOS Security - Graham Christensen
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T163000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T160000
+DTSTAMP;VALUE=DATE-TIME:20171029T130702Z
+UID:6d42bc16-57ae-4f50-af79-35ffe0421e8a@schedule.nixcon2017.org
+DESCRIPTION:Infrastructure automation testing is hard\, but NixOS makes i
+ t a breeze. Using NixOS' testing framework\, Tumblr developed a comprehe
+ nsive integration test suite for Jetpants\, Tumblr's database automation
+  toolkit designed to manage billions of rows and hundreds of database ma
+ chines.\n\nIn this talk we will explore the challenges of testing Jetpan
+ ts\, mimicking complex replication and sharding topologies\, and future 
+ applications of NixOS at Tumblr.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/20
+SUMMARY:NixOS at Tumblr - Graham Christensen
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T161500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T160000
+DTSTAMP;VALUE=DATE-TIME:20170828T135627Z
+UID:81a3783a-d283-49ce-a703-fadb89fe3fd1@schedule.nixcon2017.org
+DESCRIPTION:Nix User Profile (NixUP) should have been a declarative confi
+ guration for the user environment [1]. By now similar solutions have eme
+ rged\, like nix-home [2] or home-manager [3]. In this talk the different
+  approaches will be reviewed and an update on the state and future of Ni
+ xUP will be given.\n\n[1] https://github.com/NixOS/nixpkgs/pull/9250\n[2
+ ] https://github.com/sheenobu/nix-home\n[3] https://github.com/rycee/hom
+ e-manager
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/14
+SUMMARY:NixUP - Thomas Strobel
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T154500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T150000
+DTSTAMP;VALUE=DATE-TIME:20170828T135745Z
+UID:891c2357-d1b6-442d-bac9-ea56608d8845@schedule.nixcon2017.org
+DESCRIPTION:For many reasons\, Nixpkgs cannot accept every package ever c
+ reated.  Things have to change\, let's make sure we can at least include
+  every package\, even if they are not part of our central repository!\n
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/13
+SUMMARY:Nixpkgs Overlays - Nicolas B. Pierron
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T104500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T103000
+DTSTAMP;VALUE=DATE-TIME:20170828T095617Z
+UID:75b9eea1-f208-4c9b-b7c0-42e0f036f023@schedule.nixcon2017.org
+DESCRIPTION:
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/28
+SUMMARY:Opening - 
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T143000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T141500
+DTSTAMP;VALUE=DATE-TIME:20171107T231659Z
+UID:4a7d0bbf-4213-4191-a777-ffea17a385b6@schedule.nixcon2017.org
+DESCRIPTION:NixOS allows developers to build their application from compo
+ nents. This presentation suggests a p2p protocol for selective distribut
+ ion nixos components: binary\, source code packages and or even their gi
+ t repositories.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/39
+SUMMARY:P2P NixOS Infrastructure - Jan Troler
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T121500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T113000
+DTSTAMP;VALUE=DATE-TIME:20170905T053538Z
+UID:cada1f41-2fee-4dea-a2ba-9239244fe84b@schedule.nixcon2017.org
+DESCRIPTION:NixOS offers plenty of advanced technical features that make 
+ everyone's eyes shine with happiness: declarative system configuration\,
+  atomic upgrades\, rollbacks\, reproducible system configurations\, mult
+ i-user package management\, and so on and so forth. Basically\, we rock!
+  Many professional Linux users would love to have those capabilities ava
+ ilable on their machines. Yet\, professional users cannot make do withou
+ t some rather basic features that NixOS lacks\, like\, offering speciali
+ zed code paths for desktop users and server installations\, binding cust
+ omer service-level agreements\, long-term support releases with regular 
+ maintenance updates for 3 years of longer\, and -- last\, but not least 
+ -- fast and reliable security updates. The purpose of this talk is to ou
+ tline ways how we\, as a community\, might be able to improve upon that 
+ situation.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/7
+SUMMARY:Quo vadis\, NixOS? - Peter Simons
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T111500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T104500
+DTSTAMP;VALUE=DATE-TIME:20170905T053306Z
+UID:4b038406-a272-492c-ad1e-526ce83d2777@schedule.nixcon2017.org
+DESCRIPTION:As the latest release managers\, we will describe how NixOS r
+ eleases have been done in the past and how we want to encourage the Nix 
+ community to participate in the release process. We are going to highlig
+ ht some interesting new features of past releases and the then brand-new
+  17.09 'Hummingbird' release. Finally\, we present you some ideas for fe
+ atures we would love to see implemented.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/19
+SUMMARY:Releasing NixOS - fpletz\, Robin Gloster
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T154500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T151500
+DTSTAMP;VALUE=DATE-TIME:20171029T130248Z
+UID:fa16f403-c4b7-4ac8-909e-cd3558870a20@schedule.nixcon2017.org
+DESCRIPTION:This talk explores ways to introduce Nix into an existing inf
+ rastructure (at  work)\, based on real-life experience.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/11
+SUMMARY:Sneaking Nix at $work - zimbatm
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T150000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T141500
+DTSTAMP;VALUE=DATE-TIME:20171031T104637Z
+UID:2fe0dfad-6977-4f75-9485-05d99c2191ce@schedule.nixcon2017.org
+DESCRIPTION:While there is pretty good support for testing NixOS based se
+ rvices inside VMs\, the same doesn’t hold for large parts of nixpkgs\, e
+ specially for testing packages. I will present different approaches to i
+ mprove testing.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/16
+SUMMARY:Test ALL the Things - Profpatsch
+LOCATION:Unterwelt
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T170000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T163000
+DTSTAMP;VALUE=DATE-TIME:20171029T130625Z
+UID:d426052e-a733-403e-a838-45bc3a7ef2d0@schedule.nixcon2017.org
+DESCRIPTION:Talk with go through lessons learned using Nix in last two ye
+ ars to automate software distribution.\nWhat are the common technical an
+ d process obstacles using Nix to ship software in production - mean that
+  customers depend on the pipeline.\nWhat supportive tools and Nix featur
+ es were used\, what Nix features aren't useful\, where do I see improvem
+ ents are needed.\nWhat do I see as something that will boost Nix usage i
+ n companies and what's my plan to get there.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/26
+SUMMARY:Using Nix in production for the last two years - Domen Kožar
+LOCATION:Unterwelt
+END:VEVENT
+END:VCALENDAR

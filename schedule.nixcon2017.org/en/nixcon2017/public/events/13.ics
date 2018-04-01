@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:DAYLIGHT
+DTSTART:20170326T020000
+RDATE:20170326T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T154500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171028T150000
+DTSTAMP;VALUE=DATE-TIME:20170828T135745Z
+UID:891c2357-d1b6-442d-bac9-ea56608d8845@schedule.nixcon2017.org
+DESCRIPTION:For many reasons\, Nixpkgs cannot accept every package ever c
+ reated.  Things have to change\, let's make sure we can at least include
+  every package\, even if they are not part of our central repository!\n
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/13
+SUMMARY:Nixpkgs Overlays
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

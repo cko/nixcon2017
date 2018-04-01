@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20171029T030000
+RDATE:20171029T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T151500
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T143000
+DTSTAMP;VALUE=DATE-TIME:20171029T130320Z
+UID:7c0bc07c-5977-4254-9a3f-72d5c95d1169@schedule.nixcon2017.org
+DESCRIPTION:The current CI infrastructure around nixpkgs has difficulties
+  to build the whole package set in due time. While there were attempts t
+ o build every pull requests\, these are not enabled by default because i
+ t requires even more resources. We will explore how to optimize even mor
+ e the build process to meet the size of nixpkgs.\n\nWe will survey with 
+ state-of-the-art build systems like scons\, bazel and tup to see how we 
+ could improve incremental builds in nix. Based on nix-make\, we will des
+ cribe how nix could cooperate with the build tool of a given package to 
+ bring incremental builds at a finer granularity. In particular\, we will
+  explore how the intensional store model (as used by bazel for example) 
+ could help avoiding some mass rebuilds.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/18
+SUMMARY:Incremental package builds
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20171029T030000
+RDATE:20171029T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T170000
+DTSTART;TZID=Europe/Berlin;VALUE=DATE-TIME:20171029T163000
+DTSTAMP;VALUE=DATE-TIME:20171029T130625Z
+UID:d426052e-a733-403e-a838-45bc3a7ef2d0@schedule.nixcon2017.org
+DESCRIPTION:Talk with go through lessons learned using Nix in last two ye
+ ars to automate software distribution.\nWhat are the common technical an
+ d process obstacles using Nix to ship software in production - mean that
+  customers depend on the pipeline.\nWhat supportive tools and Nix featur
+ es were used\, what Nix features aren't useful\, where do I see improvem
+ ents are needed.\nWhat do I see as something that will boost Nix usage i
+ n companies and what's my plan to get there.
+URL:https://schedule.nixcon2017.org/en/nixcon2017/public/events/26
+SUMMARY:Using Nix in production for the last two years
+ORGANIZER:nixcon2017
+LOCATION:nixcon2017 - Unterwelt
+END:VEVENT
+END:VCALENDAR
