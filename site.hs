@@ -40,6 +40,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "schedule.nixcon2017.org/**/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "css/*" $ do
         route   idRoute
         compile compressCssCompiler
