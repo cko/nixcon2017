@@ -24,11 +24,11 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "*.json" $ do
-        route   idRoute
+    match "participants/**/*" $ do
+        route idRoute
         compile copyFileCompiler
 
-    match "participants/**/*" $ do
+    match "participants/*" $ do
         route idRoute
         compile copyFileCompiler
 
